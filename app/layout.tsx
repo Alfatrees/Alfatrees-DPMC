@@ -29,10 +29,16 @@ export const metadata: Metadata = {
 
 // Inline script to apply theme before paint — prevents flash of wrong theme
 // Safe: static hardcoded string, reads only from localStorage, no user input
+// v2: clears stale dark-mode storage from earlier builds to force light default
 const themeScript = `
   (function() {
-    var t = localStorage.getItem('alfatrees-theme');
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    var t = localStorage.getItem('alfatrees-theme-v2');
+    if (t === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.removeItem('alfatrees-theme');
+    }
   })();
 `;
 

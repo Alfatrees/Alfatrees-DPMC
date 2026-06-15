@@ -4,6 +4,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
+const STORAGE_KEY = "alfatrees-theme-v2";
+
 const ThemeContext = createContext<{
   theme: Theme;
   toggle: () => void;
@@ -26,7 +28,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("alfatrees-theme") as Theme | null;
+    // Clean up old storage key from previous builds
+    localStorage.removeItem("alfatrees-theme");
+
+    const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
     const initial = stored || "light";
     setTheme(initial);
     applyTheme(initial);
@@ -36,7 +41,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const toggle = () => {
     const next = theme === "light" ? "dark" : "light";
     setTheme(next);
-    localStorage.setItem("alfatrees-theme", next);
+    localStorage.setItem(STORAGE_KEY, next);
     applyTheme(next);
   };
 
