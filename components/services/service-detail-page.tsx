@@ -53,9 +53,20 @@ function ServiceCard({
           )}
         </div>
 
-        <p className="mt-4 flex-1 text-sm leading-relaxed text-text-secondary">
-          {service.description}
+        <p className="mt-3 text-sm font-medium text-text-primary">
+          {service.summary}
         </p>
+        <ul className="mt-3 flex-1 space-y-1.5">
+          {service.bullets.map((bullet) => (
+            <li
+              key={bullet}
+              className="flex items-start gap-2 text-sm leading-relaxed text-text-secondary"
+            >
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-text-muted" />
+              {bullet}
+            </li>
+          ))}
+        </ul>
 
         {/* Deliverable row */}
         <div className="mt-4 flex items-start gap-2 rounded-lg border border-border-default bg-bg-primary p-3">
@@ -227,7 +238,10 @@ export function ServiceDetailPage({ data }: { data: ServiceGroup }) {
               </Link>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <h1 className="mt-6 text-[clamp(32px,5vw,56px)] font-bold leading-[1.1] tracking-tight text-heading">
+              <p className="mt-6 text-sm font-semibold uppercase tracking-widest text-gold">
+                {data.title}
+              </p>
+              <h1 className="mt-2 text-[clamp(32px,5vw,56px)] font-bold leading-[1.1] tracking-tight text-heading">
                 {data.headline}
               </h1>
             </FadeIn>
