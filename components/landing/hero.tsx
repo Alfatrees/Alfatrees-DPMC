@@ -34,7 +34,7 @@ export function Hero() {
             <StaggerItem key={pill.label}>
               <Link
                 href={pill.href}
-                className="inline-block rounded-lg border border-gold-border bg-transparent px-4 py-2 font-mono text-sm text-gold-text transition-colors hover:border-gold hover:bg-gold-dim"
+                className="inline-block rounded-lg border-2 border-gold bg-gold-dim px-4 py-2 font-mono text-sm font-semibold text-heading transition-colors hover:border-gold-hover hover:bg-gold/[0.15]"
               >
                 {pill.label}
               </Link>

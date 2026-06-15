@@ -4,6 +4,31 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* =============================================
+   Non-inline @theme for custom semantic colors.
+   This creates real CSS custom properties that
+   stay as var() references — enabling light/dark
+   theme switching at runtime.
+   ============================================= */
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-card: var(--bg-card);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-border-default: var(--border-default);
+  --color-border-bright: var(--border-bright);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-heading: var(--heading);
+  --color-gold: var(--gold);
+  --color-gold-hover: var(--gold-hover);
+  --color-gold-dim: var(--gold-dim);
+  --color-gold-border: var(--gold-border);
+  --color-gold-text: var(--gold-text);
+  --color-amber: var(--amber);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -48,86 +73,73 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
-
-  /* Theme-aware semantic colors — these switch automatically via CSS vars */
-  --color-bg-primary: var(--bg-primary);
-  --color-bg-secondary: var(--bg-secondary);
-  --color-bg-card: var(--bg-card);
-  --color-bg-elevated: var(--bg-elevated);
-  --color-border-default: var(--border-default);
-  --color-border-bright: var(--border-bright);
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-muted: var(--text-muted);
-  --color-heading: var(--heading);
-  --color-gold: var(--gold);
-  --color-gold-hover: var(--gold-hover);
-  --color-gold-dim: var(--gold-dim);
-  --color-gold-border: var(--gold-border);
-  --color-gold-text: var(--gold-text);
-  --color-amber: var(--amber);
 }
 
 /* =============================================
-   LIGHT THEME (DEFAULT) — Warm cream/paper
+   LIGHT THEME (DEFAULT) — Warm parchment/kraft paper
+   Inspired by Anthropic's architectural backdrop.
+   Base tone: warm beige #E8DFD0 (not off-white).
    ============================================= */
 :root {
-  /* Page backgrounds */
-  --bg-primary: #FAF8F3;
-  --bg-secondary: #F3F0E8;
-  --bg-card: #FFFFFF;
-  --bg-elevated: #FFFFFF;
+  /* Page backgrounds — warm parchment tones */
+  --bg-primary: #E8DFD0;
+  --bg-secondary: #DED5C4;
+  --bg-card: #F0EAE0;
+  --bg-elevated: #F0EAE0;
 
-  /* Borders */
-  --border-default: #E5E0D5;
-  --border-bright: #D4CFC4;
+  /* Borders — warm, blended with parchment */
+  --border-default: #CFC6B6;
+  --border-bright: #C0B7A6;
 
-  /* Text */
+  /* Text — high contrast on parchment */
   --heading: #1A1A1A;
   --text-primary: #2C2C2C;
-  --text-secondary: #6B6B6B;
-  --text-muted: #9B9B9B;
+  --text-secondary: #5C5549;
+  --text-muted: #8A8279;
 
-  /* Gold accent — deeper for light backgrounds */
+  /* Paper grain overlay opacity (0 in dark mode) */
+  --grain-opacity: 0.4;
+
+  /* Gold accent — rich on warm parchment */
   --gold: #B8922E;
   --gold-hover: #A07E24;
-  --gold-dim: rgba(184, 146, 46, 0.08);
-  --gold-border: rgba(184, 146, 46, 0.25);
+  --gold-dim: rgba(184, 146, 46, 0.10);
+  --gold-border: rgba(184, 146, 46, 0.30);
   --gold-text: #8B6D1F;
   --amber: #D97706;
 
-  /* shadcn semantic */
-  --background: #FAF8F3;
+  /* shadcn semantic — synced with parchment palette */
+  --background: #E8DFD0;
   --foreground: #2C2C2C;
-  --card: #FFFFFF;
+  --card: #F0EAE0;
   --card-foreground: #2C2C2C;
-  --popover: #FFFFFF;
+  --popover: #F0EAE0;
   --popover-foreground: #2C2C2C;
   --primary: #B8922E;
   --primary-foreground: #FFFFFF;
-  --secondary: #F3F0E8;
+  --secondary: #DED5C4;
   --secondary-foreground: #2C2C2C;
-  --muted: #F3F0E8;
-  --muted-foreground: #9B9B9B;
-  --accent: #F3F0E8;
+  --muted: #DED5C4;
+  --muted-foreground: #8A8279;
+  --accent: #DED5C4;
   --accent-foreground: #2C2C2C;
   --destructive: #DC2626;
-  --border: #E5E0D5;
-  --input: #E5E0D5;
+  --border: #CFC6B6;
+  --input: #CFC6B6;
   --ring: #B8922E;
   --chart-1: #B8922E;
   --chart-2: #D97706;
   --chart-3: #16A34A;
   --chart-4: #2563EB;
-  --chart-5: #6B6B6B;
+  --chart-5: #5C5549;
   --radius: 0.75rem;
-  --sidebar: #F3F0E8;
+  --sidebar: #DED5C4;
   --sidebar-foreground: #2C2C2C;
   --sidebar-primary: #B8922E;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F3F0E8;
+  --sidebar-accent: #DED5C4;
   --sidebar-accent-foreground: #2C2C2C;
-  --sidebar-border: #E5E0D5;
+  --sidebar-border: #CFC6B6;
   --sidebar-ring: #B8922E;
 }
 
@@ -150,6 +162,9 @@
   --text-primary: #BBBFC7;
   --text-secondary: #8B9AB5;
   --text-muted: #5A6A80;
+
+  /* Paper grain — disabled in dark mode */
+  --grain-opacity: 0;
 
   /* Gold accent — brighter for dark backgrounds */
   --gold: #D4A853;
@@ -203,6 +218,24 @@
   html {
     @apply font-sans;
   }
+}
+
+/* =============================================
+   Architectural paper grain texture overlay.
+   Subtle noise over the entire viewport —
+   gives the warm parchment a realistic paper feel.
+   Disappears in dark mode for a clean look.
+   ============================================= */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 /* Section spacing utility */
