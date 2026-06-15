@@ -5,10 +5,10 @@ export const BRAND = {
 } as const;
 
 export const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Services", href: "/#services" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
-  { label: "Process", href: "#process" },
 ] as const;
 
 export const SERVICE_PILLS = [
