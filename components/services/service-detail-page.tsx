@@ -60,9 +60,9 @@ function ServiceCard({
           {service.bullets.map((bullet) => (
             <li
               key={bullet}
-              className="flex items-start gap-2 text-sm leading-relaxed text-text-secondary"
+              className="flex items-baseline gap-2 text-sm leading-relaxed text-text-secondary"
             >
-              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-text-muted" />
+              <span className="relative top-[-1px] h-1.5 w-1.5 shrink-0 rounded-full bg-text-muted" />
               {bullet}
             </li>
           ))}
@@ -153,9 +153,9 @@ function ServiceCard({
                     {service.methodology.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-2 text-sm text-text-secondary"
+                        className="flex items-baseline gap-2 text-sm text-text-secondary"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                        <span className="relative top-[-1px] h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                         {item}
                       </li>
                     ))}
@@ -238,10 +238,10 @@ export function ServiceDetailPage({ data }: { data: ServiceGroup }) {
               </Link>
             </FadeIn>
             <FadeIn delay={0.1}>
-              <p className="mt-6 text-sm font-semibold uppercase tracking-widest text-gold">
+              <h2 className="mt-6 text-[clamp(18px,2.5vw,24px)] font-bold uppercase tracking-[0.15em] text-gold">
                 {data.title}
-              </p>
-              <h1 className="mt-2 text-[clamp(32px,5vw,56px)] font-bold leading-[1.1] tracking-tight text-heading">
+              </h2>
+              <h1 className="mt-3 text-[clamp(32px,5vw,56px)] font-bold leading-[1.1] tracking-tight text-heading">
                 {data.headline}
               </h1>
             </FadeIn>
