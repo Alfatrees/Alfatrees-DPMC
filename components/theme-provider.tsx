@@ -13,6 +13,14 @@ export function useTheme() {
   return useContext(ThemeContext);
 }
 
+function applyTheme(theme: Theme) {
+  if (theme === "dark") {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
@@ -21,7 +29,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const stored = localStorage.getItem("alfatrees-theme") as Theme | null;
     const initial = stored || "light";
     setTheme(initial);
-    document.documentElement.classList.toggle("dark", initial === "dark");
+    applyTheme(initial);
     setMounted(true);
   }, []);
 
@@ -29,10 +37,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const next = theme === "light" ? "dark" : "light";
     setTheme(next);
     localStorage.setItem("alfatrees-theme", next);
-    document.documentElement.classList.toggle("dark", next === "dark");
+    applyTheme(next);
   };
 
-  // Prevent flash: render children immediately but theme toggle is only interactive after mount
   return (
     <ThemeContext.Provider value={{ theme: mounted ? theme : "light", toggle }}>
       {children}

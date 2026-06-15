@@ -27,6 +27,15 @@ export const metadata: Metadata = {
   },
 };
 
+// Inline script to apply theme before paint — prevents flash of wrong theme
+// Safe: static hardcoded string, reads only from localStorage, no user input
+const themeScript = `
+  (function() {
+    var t = localStorage.getItem('alfatrees-theme');
+    if (t === 'dark') document.documentElement.classList.add('dark');
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,6 +47,9 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="min-h-screen antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
