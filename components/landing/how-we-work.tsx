@@ -19,12 +19,8 @@ export function HowWeWork() {
         {/* Desktop: horizontal stepper */}
         <div className="mt-16 hidden lg:block">
           <div className="relative mx-auto max-w-4xl">
-            {/* Static line */}
-            <div className="absolute left-[calc(100%/12)] right-[calc(100%/12)] top-5 h-px bg-gold/20" />
-            {/* Animated glow dot traveling left to right */}
-            <div className="stepper-glow-track absolute left-[calc(100%/12)] right-[calc(100%/12)] top-5 h-px">
-              <div className="stepper-glow-dot" />
-            </div>
+            {/* Static line connecting circles */}
+            <div className="absolute left-[calc(100%/12)] right-[calc(100%/12)] top-5 h-px bg-gold/30" />
             <StaggerContainer className="relative grid grid-cols-6 gap-4">
               {PROCESS_STEPS.map((step) => (
                 <StaggerItem

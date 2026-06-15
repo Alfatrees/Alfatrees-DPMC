@@ -170,38 +170,3 @@
   }
 }
 
-/* Stepper glow dot — subtle amber orb traveling left to right */
-.stepper-glow-track {
-  position: relative;
-}
-
-.stepper-glow-dot {
-  position: absolute;
-  top: 50%;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #D4A853;
-  box-shadow:
-    0 0 3px 1px rgba(212, 168, 83, 0.6),
-    0 0 8px 2px rgba(212, 168, 83, 0.25);
-  transform: translate(-50%, -50%);
-  animation: dot-flow 10s ease-in-out infinite;
-}
-
-@keyframes dot-flow {
-  0% {
-    left: 0%;
-    opacity: 0;
-  }
-  4% {
-    opacity: 0.85;
-  }
-  92% {
-    opacity: 0.85;
-  }
-  100% {
-    left: 100%;
-    opacity: 0;
-  }
-}
