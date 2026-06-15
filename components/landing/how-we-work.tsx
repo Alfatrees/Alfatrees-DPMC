@@ -19,19 +19,13 @@ export function HowWeWork() {
         {/* Desktop: horizontal stepper */}
         <div className="mt-16 hidden lg:block">
           <div className="relative mx-auto max-w-4xl">
+            {/* Static line */}
+            <div className="absolute left-[calc(100%/12)] right-[calc(100%/12)] top-5 h-px bg-gold/20" />
+            {/* Animated glow dot traveling left to right */}
+            <div className="stepper-glow-track absolute left-[calc(100%/12)] right-[calc(100%/12)] top-5 h-px">
+              <div className="stepper-glow-dot" />
+            </div>
             <StaggerContainer className="relative grid grid-cols-6 gap-4">
-              {/* Line + dot: span from center of col 1 to center of col 6 */}
-              {/* In 6-col grid with 16px gap: col width = (100% - 80px)/6, center offset = col_width/2 */}
-              <div
-                className="pointer-events-none absolute top-5 h-px bg-gold/20"
-                style={{ left: "calc((100% - 80px) / 12)", right: "calc((100% - 80px) / 12)" }}
-              />
-              <div
-                className="stepper-glow-track pointer-events-none absolute top-5 h-px"
-                style={{ left: "calc((100% - 80px) / 12)", right: "calc((100% - 80px) / 12)" }}
-              >
-                <div className="stepper-glow-dot" />
-              </div>
               {PROCESS_STEPS.map((step) => (
                 <StaggerItem
                   key={step.number}
