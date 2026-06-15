@@ -9,7 +9,7 @@ export function ServicesOverview() {
     <section id="services" className="section-padding bg-bg-primary">
       <div className="mx-auto max-w-[1280px] px-6">
         <FadeIn className="text-center">
-          <h2 className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-white">
+          <h2 className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-heading">
             What We Deliver
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
@@ -24,7 +24,7 @@ export function ServicesOverview() {
                 href={service.href}
                 className="group flex h-full flex-col rounded-xl border border-border-default bg-bg-card p-6 transition-all duration-200 hover:border-border-bright hover:border-t-gold"
               >
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-heading">
                   {service.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-text-secondary">

@@ -20,7 +20,7 @@ export function Footer() {
                   height={32}
                   className="rounded-full"
                 />
-                <span className="text-lg font-semibold text-white">
+                <span className="text-lg font-semibold text-heading">
                   {BRAND.name}
                 </span>
               </Link>

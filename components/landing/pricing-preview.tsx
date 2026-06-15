@@ -15,7 +15,7 @@ export function PricingPreview() {
       <div className="mx-auto max-w-[1280px] px-6">
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:justify-between">
           <FadeIn>
-            <h2 className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-white">
+            <h2 className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-heading">
               Transparent Pricing
             </h2>
             <p className="mt-4 text-lg text-text-secondary">
@@ -32,7 +32,7 @@ export function PricingPreview() {
             >
               <span
                 className={
-                  currency === "usd" ? "text-white" : "text-text-muted"
+                  currency === "usd" ? "text-heading" : "text-text-muted"
                 }
               >
                 $ USD
@@ -40,7 +40,7 @@ export function PricingPreview() {
               <span className="text-text-muted">/</span>
               <span
                 className={
-                  currency === "inr" ? "text-white" : "text-text-muted"
+                  currency === "inr" ? "text-heading" : "text-text-muted"
                 }
               >
                 ₹ INR
@@ -64,14 +64,14 @@ export function PricingPreview() {
                     <span className="text-xs font-medium uppercase tracking-wider text-gold-text">
                       {tier.tier}
                     </span>
-                    <h3 className="mt-2 text-lg font-semibold text-white">
+                    <h3 className="mt-2 text-lg font-semibold text-heading">
                       {tier.name}
                     </h3>
                     <div className="mt-4">
                       <span className="text-sm text-text-muted">
                         Starting from
                       </span>
-                      <div className="mt-1 text-2xl font-bold text-white">
+                      <div className="mt-1 text-2xl font-bold text-heading">
                         {currency === "usd"
                           ? tier.startsFrom.usd
                           : tier.startsFrom.inr}
@@ -113,7 +113,7 @@ export function PricingPreview() {
                                 <span className="text-sm text-text-secondary">
                                   {detail.service}
                                 </span>
-                                <span className="shrink-0 text-sm font-medium text-white">
+                                <span className="shrink-0 text-sm font-medium text-heading">
                                   {currency === "usd"
                                     ? detail.price.usd
                                     : detail.price.inr}

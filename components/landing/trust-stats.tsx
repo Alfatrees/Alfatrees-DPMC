@@ -10,7 +10,7 @@ export function TrustStats() {
         <StaggerContainer className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {TRUST_STATS.map((stat) => (
             <StaggerItem key={stat.label} className="text-center">
-              <div className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-white">
+              <div className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-heading">
                 {stat.value}
               </div>
               <div className="mt-2 text-xs font-medium uppercase tracking-wider text-text-muted">

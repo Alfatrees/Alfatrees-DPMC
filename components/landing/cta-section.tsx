@@ -12,7 +12,7 @@ export function CtaSection() {
 
       <div className="relative z-10 mx-auto max-w-[1280px] px-6 text-center">
         <FadeIn>
-          <h2 className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-white">
+          <h2 className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-heading">
             Your Project Deserves Better Controls.
           </h2>
         </FadeIn>
@@ -24,7 +24,7 @@ export function CtaSection() {
         <FadeIn delay={0.3}>
           <Link
             href="/get-started"
-            className="mt-10 inline-block rounded-lg bg-gold px-10 py-4 text-lg font-semibold text-bg-primary transition-colors hover:bg-gold-hover"
+            className="mt-10 inline-block rounded-lg bg-gold px-10 py-4 text-lg font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
           >
             Book a Free Scope Call &rarr;
           </Link>

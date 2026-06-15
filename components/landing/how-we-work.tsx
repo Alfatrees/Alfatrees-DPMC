@@ -8,7 +8,7 @@ export function HowWeWork() {
     <section id="process" className="section-padding bg-bg-primary">
       <div className="mx-auto max-w-[1280px] px-6">
         <FadeIn className="text-center">
-          <h2 className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-white">
+          <h2 className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.15] text-heading">
             How We Work
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
@@ -30,7 +30,7 @@ export function HowWeWork() {
                   <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold bg-bg-primary text-sm font-semibold text-gold">
                     {step.number}
                   </div>
-                  <h3 className="mt-4 text-sm font-semibold text-white">
+                  <h3 className="mt-4 text-sm font-semibold text-heading">
                     {step.title}
                   </h3>
                   <p className="mt-2 text-xs leading-relaxed text-text-secondary">
@@ -54,7 +54,7 @@ export function HowWeWork() {
                 <div className="absolute -left-[calc(1rem+13px)] flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold bg-bg-primary text-sm font-semibold text-gold">
                   {step.number}
                 </div>
-                <h3 className="text-base font-semibold text-white">
+                <h3 className="text-base font-semibold text-heading">
                   {step.title}
                 </h3>
                 <p className="mt-1 text-sm text-text-secondary">

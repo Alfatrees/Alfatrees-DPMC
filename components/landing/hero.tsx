@@ -13,7 +13,7 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-[1280px] px-6 text-center">
         <FadeIn>
-          <h1 className="text-[clamp(36px,5.5vw,68px)] font-bold leading-[1.08] tracking-tight text-white">
+          <h1 className="text-[clamp(36px,5.5vw,68px)] font-bold leading-[1.08] tracking-tight text-heading">
             Estimation. Scheduling. Controls.
             <br />
             <span className="text-gold">Delivered in 24–72 Hours.</span>
@@ -46,7 +46,7 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/get-started"
-              className="rounded-lg bg-gold px-8 py-3.5 text-base font-semibold text-bg-primary transition-colors hover:bg-gold-hover"
+              className="rounded-lg bg-gold px-8 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
             >
               Get Started &rarr;
             </Link>
