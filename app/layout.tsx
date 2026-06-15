@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ServiceRequestProvider } from "@/components/service-request-provider";
 import "./globals.css";
 
 const inter = localFont({
@@ -57,7 +58,9 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="min-h-screen antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <ServiceRequestProvider>{children}</ServiceRequestProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -5,10 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { NAV_LINKS, BRAND } from "@/lib/constants";
 import { useTheme } from "@/components/theme-provider";
+import { useServiceRequest } from "@/components/service-request-provider";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme, toggle } = useTheme();
+  const { count } = useServiceRequest();
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border-default bg-bg-primary/80 backdrop-blur-xl">
@@ -62,9 +64,14 @@ export function Navbar() {
 
           <Link
             href="/get-started"
-            className="rounded-lg bg-gold px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
+            className="relative rounded-lg bg-gold px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
           >
             Get Started
+            {count > 0 && (
+              <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-heading text-[10px] font-bold text-bg-primary">
+                {count}
+              </span>
+            )}
           </Link>
         </div>
 

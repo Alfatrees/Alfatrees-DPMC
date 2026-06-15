@@ -7,7 +7,7 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 export const metadata: Metadata = {
   title: "About | Alfatrees PMC",
   description:
-    "Alfatrees PMC is a specialist remote construction project management consultancy — estimation, scheduling, project controls, and design management. Led by Prakash Chand, B.Arch, with 5–6 years of construction PM experience on government infrastructure projects in Canada.",
+    "Alfatrees PMC is a specialist construction project management consultancy — estimation, scheduling, project controls, and design management. Led by Prakash Chand, B.Arch, with construction PM experience on government infrastructure projects in Canada.",
 };
 
 /* ─────────────────────────────────────────────
@@ -18,7 +18,7 @@ const EDGE_ITEMS = [
   {
     title: "North American Standards by Default",
     body:
-      "5–6 years of construction PM at GNB DTI — Government of New Brunswick, Department of Transportation & Infrastructure, Canada. Imperial units, CSI MasterFormat, AIA/CCDC document standards. No ramp-up time for North American clients.",
+      "3 years of construction PM at the Government of New Brunswick, Department of Transportation & Infrastructure, Canada. Imperial units, CSI MasterFormat, AIA/CCDC document standards. No ramp-up time for North American clients.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="12" cy="12" r="10" />
@@ -64,7 +64,7 @@ const EDGE_ITEMS = [
   {
     title: "23 Services. One Specialist.",
     body:
-      "From AACE Class 5 conceptual budgets through forensic delay analysis — all 23 services are 100% remote-deliverable, organized across 6 disciplines. No generalist freelancer picking up unfamiliar scope. Every service is something we build and deliver daily.",
+      "From AACE Class 5 conceptual budgets through forensic delay analysis — all 23 services are delivered digitally, organized across 6 disciplines. No generalist freelancer picking up unfamiliar scope. Every service is something we build and deliver daily.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <polyline points="9 11 12 14 22 4" />
@@ -116,7 +116,7 @@ export default function AboutPage() {
 
             <FadeIn delay={0.2}>
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
-                Alfatrees PMC is a remote construction project management
+                Alfatrees PMC is a construction project management
                 consultancy specializing in estimation, scheduling, project
                 controls, and design management. Not a generalist agency — a
                 focused specialist practice built around one principal and a
@@ -228,12 +228,12 @@ export default function AboutPage() {
                         detail: "Construction management, scheduling, and project controls",
                       },
                       {
-                        label: "COA Registered",
-                        detail: "Council of Architecture, India",
+                        label: "Council of Architecture (India)",
+                        detail: "Registered practicing professional",
                       },
                       {
-                        label: "GNB DTI, Canada",
-                        detail: "5–6 yrs · Government of New Brunswick, Dept. of Transportation & Infrastructure",
+                        label: "Government of New Brunswick, Canada",
+                        detail: "3 yrs · Department of Transportation & Infrastructure",
                       },
                     ].map((item) => (
                       <li key={item.label} className="flex gap-3">
@@ -255,7 +255,7 @@ export default function AboutPage() {
               {/* Background narrative */}
               <FadeIn delay={0.2} className="lg:col-span-2">
                 <p className="text-base leading-relaxed text-text-secondary">
-                  Five to six years of hands-on construction project management
+                  Three years of hands-on construction project management
                   work inside a provincial government infrastructure department
                   means Alfatrees PMC operates to North American standards by
                   default — not by adaptation. Imperial units, CSI
@@ -272,8 +272,8 @@ export default function AboutPage() {
                   costly field changes.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-text-secondary">
-                  COA registration (Council of Architecture, India) is a
-                  personal credential. Alfatrees PMC does not offer architecture
+                  Council of Architecture (India) registration is a
+               personal credential. Alfatrees PMC does not offer architecture
                   services and does not position as an architecture firm. The
                   credential is relevant only as it shapes how drawings are read
                   and how design management services are delivered.
@@ -284,8 +284,8 @@ export default function AboutPage() {
                   {[
                     "B.Arch",
                     "Construction Management & Technology",
-                    "COA Registered",
-                    "GNB DTI Canada",
+                    "Council of Architecture (India)",
+                    "Govt. of New Brunswick, Canada",
                     "AACE Aligned",
                     "MS Project",
                     "Primavera P6",
