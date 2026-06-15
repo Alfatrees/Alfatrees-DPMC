@@ -1,3 +1,9 @@
+export const BRAND = {
+  name: "Alfatrees PMC",
+  tagline: "Estimation · Scheduling · Project Controls · Design Management",
+  copyright: "Alfatrees PMC",
+} as const;
+
 export const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
@@ -16,46 +22,46 @@ export const SERVICE_PILLS = [
 
 export const SERVICES = [
   {
-    code: "EST-",
     title: "Estimation",
-    subtitle: "AACE Class 5 through Class 1",
+    subtitle: "From concept budgets to bid-ready packages — every level of detail your project demands.",
     count: "8 services",
     href: "/services/estimation",
+    icon: "calculator",
   },
   {
-    code: "SCH-",
     title: "Scheduling",
-    subtitle: "CPM Baseline, Updates, Audit, Forensics",
+    subtitle: "CPM baselines, progress tracking, recovery plans, and forensic delay analysis.",
     count: "5 services",
     href: "/services/scheduling",
+    icon: "calendar",
   },
   {
-    code: "CTL-",
     title: "Project Controls",
-    subtitle: "Cost + Schedule Reporting, EVM",
+    subtitle: "Real-time cost and schedule monitoring with earned value reporting.",
     count: "3 services",
     href: "/services/controls",
+    icon: "bar-chart",
   },
   {
-    code: "DMR-",
     title: "Design Management",
-    subtitle: "Retainer: RFI, Submittals, Coordination",
+    subtitle: "RFI tracking, submittal reviews, consultant coordination, and quality standards.",
     count: "1 retainer",
     href: "/services/design-management",
+    icon: "layers",
   },
   {
-    code: "EVL-",
     title: "Evaluation & Review",
-    subtitle: "Cost, Contractor, Performance, Constructability",
+    subtitle: "Independent cost, contractor, performance, and constructability assessments.",
     count: "4 services",
     href: "/services/evaluation",
+    icon: "search",
   },
   {
-    code: "QAP-",
     title: "Quality Planning",
-    subtitle: "QA/QC Plans, Inspection Checklists",
+    subtitle: "QA/QC plans and inspection checklists tailored to your project scope.",
     count: "2 services",
     href: "/services/quality-planning",
+    icon: "shield-check",
   },
 ] as const;
 
@@ -104,26 +110,49 @@ export const PRICING_TIERS = [
   {
     tier: "FIXED",
     name: "Per-Deliverable",
-    range: { usd: "$75 – $5,000+", inr: "₹5,000 – ₹3,00,000+" },
-    description: "Estimates, schedules, audits, evaluations",
+    startsFrom: { usd: "$75", inr: "₹5,000" },
+    description: "One-time deliverables with clear scope and fixed cost",
+    details: [
+      { service: "Quantity Takeoff (Single Trade)", price: { usd: "From $75", inr: "From ₹5,000" } },
+      { service: "Conceptual Estimate", price: { usd: "From $200", inr: "From ₹12,000" } },
+      { service: "Detailed Estimate", price: { usd: "From $500", inr: "From ₹30,000" } },
+      { service: "Bid-Ready Package", price: { usd: "From $1,200", inr: "From ₹75,000" } },
+      { service: "Baseline CPM Schedule", price: { usd: "From $400", inr: "From ₹25,000" } },
+      { service: "Schedule Health Audit", price: { usd: "From $300", inr: "From ₹18,000" } },
+    ],
   },
   {
     tier: "HOURLY",
     name: "Ongoing Support",
-    range: { usd: "$25 – $55/hr", inr: "₹1,500 – ₹3,500/hr" },
-    description: "Fractional controls, change orders",
+    startsFrom: { usd: "$25/hr", inr: "₹1,500/hr" },
+    description: "Flexible support for ongoing or evolving project needs",
+    details: [
+      { service: "Fractional Project Controls", price: { usd: "From $25/hr", inr: "From ₹1,500/hr" } },
+      { service: "Change Order Analysis", price: { usd: "From $35/hr", inr: "From ₹2,200/hr" } },
+      { service: "Cost Evaluation", price: { usd: "From $40/hr", inr: "From ₹2,500/hr" } },
+    ],
   },
   {
     tier: "MONTHLY",
     name: "Retainer",
-    range: { usd: "$800 – $3,000/mo", inr: "₹50,000 – ₹1,80,000/mo" },
-    description: "Schedule updates, controls, design management",
+    startsFrom: { usd: "$800/mo", inr: "₹50,000/mo" },
+    description: "Dedicated support with predictable monthly cost",
+    details: [
+      { service: "Schedule Updates & Reporting", price: { usd: "From $800/mo", inr: "From ₹50,000/mo" } },
+      { service: "Project Controls Retainer", price: { usd: "From $1,200/mo", inr: "From ₹75,000/mo" } },
+      { service: "Design Management Retainer", price: { usd: "From $1,500/mo", inr: "From ₹90,000/mo" } },
+    ],
   },
   {
     tier: "ADVISORY",
     name: "Expert & Forensic",
-    range: { usd: "$50 – $80/hr", inr: "₹3,500 – ₹5,500/hr" },
-    description: "Delay analysis, schedule forensics",
+    startsFrom: { usd: "$50/hr", inr: "₹3,500/hr" },
+    description: "Specialized expertise for complex or disputed projects",
+    details: [
+      { service: "Forensic Delay Analysis", price: { usd: "From $50/hr", inr: "From ₹3,500/hr" } },
+      { service: "Constructability Review", price: { usd: "From $60/hr", inr: "From ₹4,000/hr" } },
+      { service: "Performance Evaluation", price: { usd: "From $55/hr", inr: "From ₹3,800/hr" } },
+    ],
   },
 ] as const;
 

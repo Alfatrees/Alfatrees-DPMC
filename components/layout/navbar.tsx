@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS, BRAND } from "@/lib/constants";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,12 +14,12 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/logo-32-final.png"
-            alt="Alfatrees"
+            alt={BRAND.name}
             width={32}
             height={32}
             className="rounded-full"
           />
-          <span className="text-lg font-semibold text-white">Alfatrees</span>
+          <span className="text-lg font-semibold text-white">{BRAND.name}</span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">

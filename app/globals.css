@@ -169,3 +169,26 @@
     padding-bottom: 48px;
   }
 }
+
+/* Stepper glow animation — subtle amber pulse moving left to right */
+.stepper-glow {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 168, 83, 0.6) 30%,
+    rgba(245, 158, 11, 0.8) 50%,
+    rgba(212, 168, 83, 0.6) 70%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: stepper-flow 4s ease-in-out infinite;
+}
+
+@keyframes stepper-flow {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
