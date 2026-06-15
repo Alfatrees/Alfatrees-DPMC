@@ -21,9 +21,9 @@ export function HowWeWork() {
           <div className="relative mx-auto max-w-4xl">
             {/* Static line */}
             <div className="absolute left-[calc(100%/12)] right-[calc(100%/12)] top-5 h-px bg-gold/20" />
-            {/* Animated glow line */}
-            <div className="absolute left-[calc(100%/12)] right-[calc(100%/12)] top-[19px] h-[3px] overflow-hidden rounded-full">
-              <div className="stepper-glow h-full w-full" />
+            {/* Animated glow dot traveling left to right */}
+            <div className="stepper-glow-track absolute left-[calc(100%/12)] right-[calc(100%/12)] top-5 h-px">
+              <div className="stepper-glow-dot" />
             </div>
             <StaggerContainer className="relative grid grid-cols-6 gap-4">
               {PROCESS_STEPS.map((step) => (

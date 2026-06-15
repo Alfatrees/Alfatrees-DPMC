@@ -1,5 +1,5 @@
 export const BRAND = {
-  name: "Alfatrees PMC",
+  name: "Alfatrees",
   tagline: "Estimation · Scheduling · Project Controls · Design Management",
   copyright: "Alfatrees PMC",
 } as const;
@@ -66,7 +66,7 @@ export const SERVICES = [
 ] as const;
 
 export const TRUST_STATS = [
-  { value: "48hr", label: "Typical Turnaround" },
+  { value: "24–72hr", label: "Typical Turnaround" },
   { value: "10+", label: "Project Types" },
   { value: "23", label: "Specialized Services" },
   { value: "AACE", label: "Aligned Standards" },

@@ -13,16 +13,19 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-[1280px] px-6 text-center">
         <FadeIn>
-          <h1 className="text-[clamp(40px,6vw,72px)] font-bold leading-[1.05] tracking-tight text-white">
-            Bid-Ready Estimates in 48 Hours.
+          <h1 className="text-[clamp(36px,5.5vw,68px)] font-bold leading-[1.08] tracking-tight text-white">
+            Estimation. Scheduling. Controls.
+            <br />
+            <span className="text-gold">Delivered in 24–72 Hours.</span>
           </h1>
         </FadeIn>
 
         <FadeIn delay={0.15}>
           <p className="mx-auto mt-6 max-w-3xl text-[clamp(16px,2vw,20px)] leading-relaxed text-text-secondary">
-            From first concept to final bid — we deliver the estimates, schedules,
-            and controls that keep your project on time, on budget, and audit-ready.
-            Trusted across 10+ project types worldwide.
+            We build the bid-ready estimates, CPM schedules, and project controls
+            that keep your builds on time, on budget, and audit-ready — from concept
+            through close-out. Trusted by teams across 10+ project types on
+            every continent.
           </p>
         </FadeIn>
 
