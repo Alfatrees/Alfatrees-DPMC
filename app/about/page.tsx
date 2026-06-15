@@ -224,6 +224,10 @@ export default function AboutPage() {
                         detail: "Bachelor of Architecture",
                       },
                       {
+                        label: "Construction Management & Technology",
+                        detail: "Construction management, scheduling, and project controls",
+                      },
+                      {
                         label: "COA Registered",
                         detail: "Council of Architecture, India",
                       },
@@ -279,6 +283,7 @@ export default function AboutPage() {
                 <div className="mt-8 flex flex-wrap gap-2">
                   {[
                     "B.Arch",
+                    "Construction Management & Technology",
                     "COA Registered",
                     "GNB DTI Canada",
                     "AACE Aligned",
