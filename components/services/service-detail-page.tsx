@@ -471,10 +471,10 @@ export function ServiceDetailPage({ data }: { data: ServiceGroup }) {
           <div className="relative z-10 mx-auto max-w-[1280px] px-6 text-center">
             <FadeIn>
               <h2 className="text-[clamp(28px,3.5vw,40px)] font-semibold text-heading">
-                Ready to Get Started?
+                Ready for a Quote?
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg text-text-secondary">
-                Book a free 15-minute scope call. Exact quote within 24 hours.
+                Get an instant quote in under 2 minutes, or book a discovery call.
                 Starts from{" "}
                 <span className="font-semibold text-heading">
                   {data.pricingStarts.usd}

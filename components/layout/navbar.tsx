@@ -66,7 +66,7 @@ export function Navbar() {
             href="/get-started"
             className="relative rounded-lg bg-gold px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
           >
-            Get Started
+            Request Instant Quote
             {count > 0 && (
               <span className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-heading text-[10px] font-bold text-bg-primary">
                 {count}
@@ -141,7 +141,7 @@ export function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="mt-2 rounded-lg bg-gold px-4 py-2 text-center font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
             >
-              Get Started
+              Request Instant Quote
             </Link>
           </div>
         </div>

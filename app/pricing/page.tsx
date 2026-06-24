@@ -128,10 +128,9 @@ export default function PricingPage() {
                 Transparent. Fixed. No Surprises.
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-lg text-text-secondary">
-                Every engagement starts with a free 15-minute scope call. You
-                receive an exact fixed quote within 24 hours — no hourly
-                surprises, no hidden fees. Pricing depends on project size,
-                complexity, and timeline.
+                Get an instant quote in under 2 minutes — select your services,
+                enter project details, and see your price breakdown
+                immediately. No hourly surprises, no hidden fees.
               </p>
             </FadeIn>
 
@@ -219,7 +218,7 @@ export default function PricingPage() {
                         href="/get-started"
                         className="block rounded-lg bg-gold px-6 py-3 text-center text-sm font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
                       >
-                        Get a Quote &rarr;
+                        Request Instant Quote &rarr;
                       </Link>
                     </div>
                   </div>
@@ -336,14 +335,14 @@ export default function PricingPage() {
                 Ready for an Exact Quote?
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg text-text-secondary">
-                Book a free 15-minute scope call. We'll review your project and
-                send a fixed quote within 24 hours.
+                Get an instant quote in under 2 minutes, or book a discovery
+                call for complex projects.
               </p>
               <Link
                 href="/get-started"
                 className="mt-8 inline-block rounded-lg bg-gold px-10 py-4 text-lg font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
               >
-                Book a Free Scope Call &rarr;
+                Request Instant Quote &rarr;
               </Link>
             </FadeIn>
           </div>

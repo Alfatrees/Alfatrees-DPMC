@@ -19,7 +19,7 @@ export async function generateMetadata({
   if (!data) return {};
 
   return {
-    title: `${data.title} Services | Alfatrees PMC`,
+    title: `${data.title} Services`,
     description: data.description,
   };
 }

@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
-  title: "Our Process | Alfatrees PMC",
+  title: "Our Process",
   description:
     "Six steps from first contact to final delivery. Fixed quotes, shared Google Drive, one revision round included — no surprises at any stage.",
 };
@@ -117,7 +117,7 @@ const STEPS = [
     summary:
       "Reach out via the website, email, or your preferred freelance platform. Share the basics — what service you need, project type, approximate size, and your timeline. No commitment required at this stage.",
     details: [
-      "Contact us via the website contact form, hello@alfatrees.com, or Upwork/Fiverr",
+      "Contact us via the website contact form, info.alfatrees@gmail.com, or Upwork/Fiverr",
       "Share basic project info: service type, project category, rough size, and deadline",
       "Attach any documents you have — drawings, specs, or a scope summary if available",
       "We acknowledge every inquiry within a few hours and confirm whether we can help",
@@ -127,18 +127,18 @@ const STEPS = [
   {
     number: 2,
     title: "Discover",
-    tagline: "Free 15-min scope call",
+    tagline: "Instant quote or $50 discovery call",
     icon: IconVideo,
     summary:
-      "A focused video call (Zoom or Teams) to understand your project in detail. We review scope, clarify deliverable preferences, check the plan set for completeness, and confirm exactly which services match your needs.",
+      "Use our instant quote calculator to get a detailed price breakdown in under 2 minutes — no call needed. For complex or multi-discipline projects: book a 30-minute discovery call ($50, credited to your first engagement) via Zoom.",
     details: [
-      "Free 15-minute call via Zoom or Microsoft Teams — book directly via Cal.com",
-      "We review the plan set, scope, and any existing documents you have shared",
-      "Discuss deliverable format preferences — Excel, PDF, .mpp, .xer, or your template",
-      "Clarify any ambiguities in drawings, specifications, or scope boundaries",
+      "Use the instant quote calculator — select services, enter project details, see your price breakdown immediately",
+      "The quote shows every line item with service codes, rates, and multipliers for full transparency",
+      "Book Now to proceed, or Email My Quote to review later — both capture your details",
+      "For complex projects: book a 30-minute discovery call ($50 via Razorpay, credited to first engagement)",
       "Confirm which specific services apply and agree on the engagement structure",
     ],
-    note: "For complex or multi-discipline projects, a paid 60-minute deep-dive discovery is available at $50 — fully credited toward the first engagement.",
+    note: "The $50 discovery call fee is fully credited toward your first engagement — so if you proceed, the call costs you nothing.",
   },
   {
     number: 3,
@@ -148,7 +148,7 @@ const STEPS = [
     summary:
       "Within 24 hours of the discovery call, you receive a fixed-price quote with clear scope, deliverables list, turnaround time, and payment terms. No hourly billing, no scope ambiguity, and no hidden fees.",
     details: [
-      "Fixed-price quote delivered within 24 hours of the scope call",
+      "Fixed-price quote delivered within 24 hours of document review or discovery call",
       "Quote includes: exact scope covered, specific deliverables list, and turnaround time",
       "Payment terms stated clearly — typically 50% upfront, 50% on delivery",
       "Exclusions listed explicitly so there are no scope interpretation disputes",
@@ -226,7 +226,7 @@ const COMMUNICATION_CHANNELS = [
   {
     icon: IconVideo,
     title: "Zoom / Teams",
-    description: "Discovery call, milestone check-ins, and delivery walkthroughs. Scheduled via Cal.com — pick a time that works for your timezone.",
+    description: "Discovery calls, milestone check-ins, and delivery walkthroughs. Scheduled via Cal.com — pick a time that works for your timezone.",
   },
   {
     icon: IconMail,
@@ -236,7 +236,7 @@ const COMMUNICATION_CHANNELS = [
   {
     icon: IconCalendar,
     title: "Cal.com",
-    description: "Self-serve booking for scope calls and check-ins. No back-and-forth scheduling emails — pick a slot directly from our availability.",
+    description: "Self-serve booking for discovery calls and check-ins. No back-and-forth scheduling emails — pick a slot directly from our availability.",
   },
 ];
 
@@ -597,7 +597,7 @@ export default function ProcessPage() {
               {[
                 {
                   q: "Do I need complete drawings to get started?",
-                  a: "No. Partial drawings and preliminary specs are fine. We flag gaps during the scope call and confirm what is achievable with what you have. A clear scope produces a better deliverable — we will tell you if something critical is missing.",
+                  a: "No. Partial drawings and preliminary specs are fine. We flag gaps during our review and confirm what is achievable with what you have. A clear scope produces a better deliverable — we will tell you if something critical is missing.",
                 },
                 {
                   q: "What if I need more than one revision?",
@@ -605,7 +605,7 @@ export default function ProcessPage() {
                 },
                 {
                   q: "Can you work to my timezone?",
-                  a: "Yes. We coordinate across North America, Europe, the Gulf, and India. The scope call and delivery walkthrough are scheduled via Cal.com — pick a slot that works for you. Async delivery means most work happens while you sleep.",
+                  a: "Yes. We coordinate across North America, Europe, the Gulf, and India. Discovery calls and delivery walkthroughs are scheduled via Cal.com — pick a slot that works for you. Async delivery means most work happens while you sleep.",
                 },
                 {
                   q: "What file formats do you accept?",
@@ -643,18 +643,17 @@ export default function ProcessPage() {
           <div className="relative z-10 mx-auto max-w-[1280px] px-6 text-center">
             <FadeIn>
               <h2 className="text-[clamp(28px,4vw,44px)] font-semibold text-heading">
-                Ready to Get a Quote?
+                Ready for an Instant Quote?
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg text-text-secondary">
-                Book a free 15-minute scope call. Fixed quote within 24 hours.
-                Work starts in 24–48 hours.
+                Get an instant quote in under 2 minutes, or book a discovery call for complex projects.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/get-started"
                   className="rounded-lg bg-gold px-8 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
                 >
-                  Book a Free Scope Call &rarr;
+                  Request Instant Quote &rarr;
                 </Link>
                 <Link
                   href="/services/estimation"

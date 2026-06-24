@@ -7,6 +7,7 @@ export const BRAND = {
 export const NAV_LINKS = [
   { label: "Services", href: "/#services" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
 ] as const;
@@ -82,7 +83,7 @@ export const PROCESS_STEPS = [
   {
     number: 2,
     title: "Discover",
-    detail: "Free 15-min scope call to understand your project",
+    detail: "Get an instant quote online or book a 30-min discovery call",
   },
   {
     number: 3,

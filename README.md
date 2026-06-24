@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alfatrees PMC — Website
+
+Construction project management consultancy specializing in estimation, scheduling, project controls, and design management. Delivered globally in 24-72 hours.
+
+## Tech Stack
+
+- **Next.js 16** (App Router) + **React 19**
+- **Tailwind CSS 4** + **shadcn/ui**
+- **Framer Motion** + **GSAP** (animations)
+- **Three.js** + **React Three Fiber** (3D portfolio globe)
+- **Resend** (transactional email)
+- **Cal.com** (discovery call scheduling)
+- **Razorpay** (payment processing)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local  # Fill in API keys
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route | Description |
+|-------|-------------|
+| `/` | Landing page (8 sections) |
+| `/services/[slug]` | 6 service detail pages |
+| `/pricing` | 4-tier pricing with USD/INR toggle |
+| `/about` | Principal credentials, standards |
+| `/process` | 6-step engagement flow |
+| `/get-started` | Instant quote calculator + discovery call |
+| `/portfolio` | 3D globe project showcase |
+| `/faq` | 25+ questions, accordion |
+| `/terms` | Terms of engagement |
+| `/privacy` | Privacy policy |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+See `.env.example` for all required variables.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See `DEPLOYMENT.md` for complete deployment instructions including:
+- Email setup (Hostinger)
+- Resend domain verification
+- Cal.com event configuration
+- Razorpay API keys
+- Vercel deployment
+- DNS migration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Documentation
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `CLAUDE.md` — Project conventions for AI assistants
+- `DESIGN.md` — Design system (colors, typography, components)
+- `DEPLOYMENT.md` — Step-by-step launch guide

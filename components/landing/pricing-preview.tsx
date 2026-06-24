@@ -19,7 +19,7 @@ export function PricingPreview() {
               Transparent Pricing
             </h2>
             <p className="mt-4 text-lg text-text-secondary">
-              Four simple tiers. Exact quote after discovery call.
+              Four simple tiers. Exact quote within 24 hours.
             </p>
           </FadeIn>
 
@@ -133,7 +133,7 @@ export function PricingPreview() {
 
         <FadeIn delay={0.3}>
           <p className="mt-10 text-center text-sm text-text-secondary">
-            Exact quote within 24 hours of discovery call.{" "}
+            Exact quote within 24 hours of your submission.{" "}
             <Link
               href="/pricing"
               className="text-gold-text transition-colors hover:text-gold-hover"

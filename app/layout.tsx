@@ -18,13 +18,37 @@ const jetbrainsMono = localFont({
   display: "swap",
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://alfatrees.com";
+
 export const metadata: Metadata = {
-  title: "Alfatrees PMC | Estimation, Scheduling & Project Controls",
+  title: {
+    default: "Alfatrees PMC | Estimation, Scheduling & Project Controls",
+    template: "%s | Alfatrees PMC",
+  },
   description:
-    "Bid-ready estimates, CPM schedules, and project controls delivered globally. AACE-aligned services across 10+ project types.",
+    "Bid-ready estimates, CPM schedules, and project controls delivered globally in 24-72 hours. AACE-aligned services across 10+ project types.",
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: "Alfatrees PMC",
+    title: "Alfatrees PMC | Estimation, Scheduling & Project Controls",
+    description:
+      "Bid-ready estimates, CPM schedules, and project controls delivered globally in 24-72 hours. AACE-aligned services across 10+ project types.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Alfatrees PMC | Estimation, Scheduling & Project Controls",
+    description:
+      "Bid-ready estimates, CPM schedules, and project controls delivered globally in 24-72 hours.",
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
 };
 
@@ -58,6 +82,31 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="min-h-screen antialiased">
+        {/* Static JSON-LD structured data — all values hardcoded, no user input */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Alfatrees PMC",
+              description:
+                "Construction project management consultancy specializing in estimation, scheduling, project controls, and design management.",
+              url: SITE_URL,
+              logo: `${SITE_URL}/logo-64-final.png`,
+              email: "info.alfatrees@gmail.com",
+              areaServed: "Worldwide",
+              serviceType: [
+                "Construction Cost Estimation",
+                "CPM Scheduling",
+                "Project Controls",
+                "Design Management",
+                "Quality Assurance",
+              ],
+              priceRange: "$75 - $5000+",
+            }),
+          }}
+        />
         <ThemeProvider>
           <ServiceRequestProvider>{children}</ServiceRequestProvider>
         </ThemeProvider>

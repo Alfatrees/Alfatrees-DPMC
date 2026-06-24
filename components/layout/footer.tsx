@@ -82,10 +82,10 @@ export function Footer() {
                 ))}
                 <li>
                   <a
-                    href="mailto:hello@alfatrees.com"
+                    href="mailto:info.alfatrees@gmail.com"
                     className="text-sm text-text-secondary transition-colors hover:text-text-primary"
                   >
-                    hello@alfatrees.com
+                    info.alfatrees@gmail.com
                   </a>
                 </li>
                 <li>

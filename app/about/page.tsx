@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 
 export const metadata: Metadata = {
-  title: "About | Alfatrees PMC",
+  title: "About",
   description:
     "Alfatrees PMC is a specialist construction project management consultancy — estimation, scheduling, project controls, and design management. Led by Prakash Chand, B.Arch, with construction PM experience on government infrastructure projects in Canada.",
 };
@@ -130,7 +130,7 @@ export default function AboutPage() {
                   href="/get-started"
                   className="rounded-lg bg-gold px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
                 >
-                  Book a Free Scope Call
+                  Request Instant Quote
                 </Link>
                 <Link
                   href="/services/estimation"
@@ -394,8 +394,8 @@ export default function AboutPage() {
             </FadeIn>
             <FadeIn delay={0.1}>
               <p className="mx-auto mt-5 max-w-xl text-lg text-text-secondary">
-                Free 15-minute scope call. No commitment. We&apos;ll tell you
-                exactly what you need and quote it within 24 hours.
+                Get an instant quote in under 2 minutes, or book a 30-minute
+                discovery call for complex projects.
               </p>
             </FadeIn>
             <FadeIn delay={0.25}>
@@ -404,7 +404,7 @@ export default function AboutPage() {
                   href="/get-started"
                   className="rounded-lg bg-gold px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
                 >
-                  Book a Free Scope Call &rarr;
+                  Request Instant Quote &rarr;
                 </Link>
                 <Link
                   href="/pricing"

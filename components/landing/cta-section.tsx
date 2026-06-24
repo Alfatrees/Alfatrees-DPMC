@@ -18,7 +18,7 @@ export function CtaSection() {
         </FadeIn>
         <FadeIn delay={0.15}>
           <p className="mx-auto mt-6 max-w-xl text-lg text-text-secondary">
-            Free 15-minute scope call. Exact quote in 24 hours.
+            Get an instant quote in under 2 minutes. Or book a 30-minute discovery call for complex projects.
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>
@@ -26,7 +26,7 @@ export function CtaSection() {
             href="/get-started"
             className="mt-10 inline-block rounded-lg bg-gold px-10 py-4 text-lg font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
           >
-            Book a Free Scope Call &rarr;
+            Request Instant Quote &rarr;
           </Link>
         </FadeIn>
       </div>

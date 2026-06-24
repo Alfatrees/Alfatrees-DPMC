@@ -1,1 +1,41 @@
-@AGENTS.md
+# Alfatrees PMC Website — Project Conventions
+
+## Tech Stack
+- **Framework:** Next.js 16 (App Router) + React 19
+- **Styling:** Tailwind CSS 4 + shadcn/ui (base-nova) + custom CSS variables
+- **Animation:** Framer Motion (UI) + GSAP ScrollTrigger (portfolio) + Three.js/R3F (3D globe)
+- **Email:** Resend (transactional)
+- **Payments:** Razorpay ($50 discovery calls)
+- **Scheduling:** Cal.com embed
+- **Hosting:** Vercel (free tier)
+
+## Theme System
+- CSS custom properties defined in `app/globals.css`
+- Custom semantic colors in non-inline `@theme` block (stays as `var()` references)
+- shadcn tokens in `@theme inline` block
+- Light theme: warm parchment (#E8DFD0 base), dark text, gold accents (#B8922E)
+- Dark theme: navy (#07090E base), soft gray text, gold accents (#D4A853)
+- Toggle: moon/sun icon in navbar, persists via localStorage key `alfatrees-theme-v2`
+- NEVER use `@theme inline` for custom theme-switchable colors
+
+## Single Source of Truth
+- `lib/constants.ts` — ALL service data, pricing tiers, nav links, footer links, trust stats
+- `lib/quote-engine.ts` — deterministic pricing calculator (rule-based, no AI)
+- `components/portfolio/portfolio-data.ts` — portfolio project entries
+
+## Brand Rules
+- Header/navbar: "Alfatrees" (logo + name)
+- Copyright/legal: "Alfatrees PMC"
+- NEVER use the full long company name in UI
+- CTA button label: always "Request Instant Quote"
+- Email: always info.alfatrees@gmail.com (no hello@, no quotes@)
+- Service codes (EST-01, SCH-01): visible on quotes/calculator, NOT on marketing pages
+- Delivery: say "24-72 hours" not "48 hours"
+- Discovery call: $50 paid only, never "free consultation"
+- COA compliance: NO "Architect/Architecture" in marketing copy
+
+## File Patterns
+- Page metadata: use layout.tsx for client component pages, direct export for server pages
+- Title template: `%s | Alfatrees PMC` (set in root layout)
+- All pages include `<Navbar />` and `<Footer />` except portfolio (no footer)
+- Responsive: use Tailwind breakpoints (`sm:`, `md:`, `lg:`) + `clamp()` for fluid typography

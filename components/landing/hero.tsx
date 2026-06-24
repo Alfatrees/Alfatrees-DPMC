@@ -48,7 +48,7 @@ export function Hero() {
               href="/get-started"
               className="rounded-lg bg-gold px-8 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
             >
-              Get Started &rarr;
+              Request Instant Quote &rarr;
             </Link>
             <Link
               href="#process"
