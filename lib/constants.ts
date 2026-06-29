@@ -10,6 +10,7 @@ export const NAV_LINKS = [
   { label: "Portfolio", href: "/portfolio" },
   { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 export const SERVICE_PILLS = [
@@ -908,6 +909,7 @@ export const FOOTER_LINKS = {
     { label: "Pricing", href: "/pricing" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "FAQ", href: "/faq" },
+    { label: "Contact", href: "/contact" },
   ],
   legal: [
     { label: "Terms", href: "/terms" },
