@@ -7,7 +7,7 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Alfatrees PMC is a specialist construction project management consultancy — estimation, scheduling, project controls, and design management. Led by Prakash Chand, B.Arch, with construction PM experience on government infrastructure projects in Canada.",
+    "Alfatrees PMC is a specialist construction project management consultancy — estimation, scheduling, project controls, and design management. Led by Prakash Chand, B.Arch, former Canadian government construction project manager.",
 };
 
 /* ─────────────────────────────────────────────
@@ -18,7 +18,7 @@ const EDGE_ITEMS = [
   {
     title: "North American Standards by Default",
     body:
-      "3 years of construction PM at the Government of New Brunswick, Department of Transportation & Infrastructure, Canada. Imperial units, CSI MasterFormat, AIA/CCDC document standards. No ramp-up time for North American clients.",
+      "Former construction project manager at the Government of New Brunswick, Department of Transportation & Infrastructure, Canada. Imperial units, CSI MasterFormat, AIA/CCDC document standards. No ramp-up time for North American clients.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <circle cx="12" cy="12" r="10" />
@@ -233,7 +233,7 @@ export default function AboutPage() {
                       },
                       {
                         label: "Government of New Brunswick, Canada",
-                        detail: "3 yrs · Department of Transportation & Infrastructure",
+                        detail: "Former Project Manager · Dept. of Transportation & Infrastructure",
                       },
                     ].map((item) => (
                       <li key={item.label} className="flex gap-3">
@@ -255,8 +255,8 @@ export default function AboutPage() {
               {/* Background narrative */}
               <FadeIn delay={0.2} className="lg:col-span-2">
                 <p className="text-base leading-relaxed text-text-secondary">
-                  Three years of hands-on construction project management
-                  work inside a provincial government infrastructure department
+                  Hands-on construction project management experience
+                  inside a Canadian provincial government infrastructure department
                   means Alfatrees PMC operates to North American standards by
                   default — not by adaptation. Imperial units, CSI
                   MasterFormat cost organization, AIA and CCDC document

@@ -5,10 +5,10 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://alfatrees.com";
 const SERVICE_SLUGS = [
   "estimation",
   "scheduling",
-  "project-controls",
+  "controls",
   "design-management",
-  "evaluation-advisory",
-  "quality-assurance",
+  "evaluation",
+  "quality-planning",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
