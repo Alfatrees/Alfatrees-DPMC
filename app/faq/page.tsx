@@ -75,7 +75,7 @@ const FAQ_SECTIONS = [
     items: [
       {
         q: "What does 'fractional controls' mean?",
-        a: "Instead of hiring a full-time project controls engineer ($115K+/year), you get the same discipline — earned value tracking, cost reporting, variance analysis, dashboards — on an hourly or monthly basis. Scale up during busy periods, scale down when not needed.",
+        a: "Instead of hiring a full-time project controls engineer ($120K+/year), you get the same discipline — earned value tracking, cost reporting, variance analysis, dashboards — on an hourly or monthly basis. Scale up during busy periods, scale down when not needed.",
       },
       {
         q: "How does the design management retainer work?",
@@ -104,7 +104,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: "Do you offer expedited or rush delivery?",
-        a: "Yes. Standard turnaround is 5–10 business days. Expedited delivery (50% faster) carries a +15% surcharge. Rush delivery (24–48 hours) carries a +25% surcharge. Urgency is selected during the instant quote process.",
+        a: "Yes. Standard turnaround ranges from 1–3 business days for a single-trade takeoff to 5–10 days for detailed estimates and schedules, and up to 10–20 days for forensic delay analysis. Each quote specifies the exact timeline. Expedited delivery (50% faster) carries a +15% surcharge. Rush delivery carries a +25% surcharge. Urgency is selected during the instant quote process.",
       },
     ],
   },

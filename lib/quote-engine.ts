@@ -597,6 +597,7 @@ export function calculateQuote(input: QuoteInput): QuoteBreakdown {
       "Final price confirmed after document review and scope verification.",
       "One revision round included in all fixed-price engagements.",
       "Payment: 100% advance for engagements under $500; 50% advance + 50% on delivery for $500+.",
+      "Hourly engagements: weekly invoicing, Net-7. Monthly retainers: advance payment by the 7th.",
       "Monthly retainer prices shown are per-month rates.",
       "Rates referenced from Alfatrees PMC published rate card (alfatrees.com/pricing).",
     ],
