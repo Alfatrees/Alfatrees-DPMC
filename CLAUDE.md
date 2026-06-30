@@ -7,7 +7,7 @@
 - **Email:** Resend (transactional)
 - **Payments:** Razorpay ($50 discovery calls)
 - **Scheduling:** Cal.com (free plan, username: `alfatrees`, event slug: `discovery-call`)
-- **Hosting:** Vercel (free tier, auto-deploys from GitHub `main` branch)
+- **Hosting:** Vercel Hobby (auto-deploys from GitHub `main` branch)
 - **Repository:** https://github.com/Alfatrees/Alfatrees-DPMC.git
 
 ## Theme System
