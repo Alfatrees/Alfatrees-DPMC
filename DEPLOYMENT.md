@@ -125,44 +125,63 @@ NEXT_PUBLIC_RAZORPAY_KEY_ID=rzp_live_xxxxxxxxxxxx
 
 ## Step 4: Vercel Deployment
 
-### 4a. Push Code to GitHub
+### Project Details
+- **Vercel project:** `alfatrees-dpmc`
+- **Vercel team:** `alfatrees` (Hobby plan)
+- **GitHub repo:** `Alfatrees/Alfatrees-DPMC` (PUBLIC — required for Hobby plan)
+- **Domains:** `alfatrees.com` + `www.alfatrees.com`
+
+### Git Configuration (CRITICAL)
+The local git config for this repo MUST use the Alfatrees business identity:
 ```bash
-cd alfatrees-website
-git init
-git add -A
-git commit -m "Initial commit: Alfatrees PMC website"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/alfatrees-website.git
-git push -u origin main
+cd "C:\Users\arpra\claude-api-project\alfatrees-website"
+git config user.name "Alfatrees"
+git config user.email "info.alfatrees@gmail.com"
+```
+Using any other identity (e.g., `arpra`) will cause Vercel Hobby plan to block the deployment.
+
+### How to Deploy (CLI Method — Required for Hobby Plan)
+Git auto-deploy from pushes is blocked on Vercel Hobby due to contributor identity mismatch.
+Always deploy via the Vercel CLI:
+
+```bash
+# 1. Stage and commit changes
+cd "C:\Users\arpra\claude-api-project\alfatrees-website"
+git add <files>
+git commit -m "description of changes"
+
+# 2. Push to GitHub (backup + version control)
+git push origin main
+
+# 3. Deploy to production (this is what actually updates the live site)
+npx vercel --prod
 ```
 
-### 4b. Connect to Vercel
-1. Go to https://vercel.com
-2. **Add New Project** > Import from GitHub > select `alfatrees-website`
-3. Framework: Next.js (auto-detected)
-4. Root Directory: `./` (default)
-5. Build Command: `next build` (default)
-6. Output Directory: `.next` (default)
+**Important:**
+- `git push` alone does NOT deploy. You MUST run `npx vercel --prod` after pushing.
+- First-time CLI setup: run `npx vercel login` and authenticate with your Vercel account.
+- The CLI must be linked to the project: `npx vercel link --yes --project alfatrees-dpmc`
 
-### 4c. Set Environment Variables
-In Vercel project **Settings** > **Environment Variables**, add:
+### Environment Variables (set in Vercel dashboard → Settings → Environment Variables)
 
-| Variable | Value | Scope |
-|----------|-------|-------|
-| `RESEND_API_KEY` | `re_xxxxxxxxxxxx` | Production |
-| `QUOTE_NOTIFY_EMAIL` | `info.alfatrees@gmail.com` | Production |
-| `RAZORPAY_KEY_ID` | `rzp_live_xxxxxxxxxxxx` | Production |
-| `RAZORPAY_KEY_SECRET` | `xxxxxxxxxxxxxxxxxxxxxxxx` | Production |
-| `NEXT_PUBLIC_RAZORPAY_KEY_ID` | `rzp_live_xxxxxxxxxxxx` | Production |
-| `NEXT_PUBLIC_CALCOM_USERNAME` | `alfatrees` | Production |
-| `NEXT_PUBLIC_SITE_URL` | `https://alfatrees.com` | Production |
+| Variable | Value | Status |
+|----------|-------|--------|
+| `RESEND_API_KEY` | `re_xxxxxxxxxxxx` | SET |
+| `QUOTE_NOTIFY_EMAIL` | `info.alfatrees@gmail.com` | SET |
+| `NEXT_PUBLIC_CALCOM_USERNAME` | `alfatrees` (lowercase) | SET |
+| `RAZORPAY_KEY_ID` | `rzp_live_xxxxxxxxxxxx` | NOT SET (pending Razorpay signup) |
+| `RAZORPAY_KEY_SECRET` | `xxxxxxxxxxxxxxxxxxxxxxxx` | NOT SET (pending Razorpay signup) |
+| `NEXT_PUBLIC_RAZORPAY_KEY_ID` | `rzp_live_xxxxxxxxxxxx` | NOT SET (pending Razorpay signup) |
+| `NEXT_PUBLIC_SITE_URL` | `https://alfatrees.com` | NOT SET (add when ready) |
 
 Note: `RESEND_FROM_EMAIL` is optional — defaults to `onboarding@resend.dev`. Set to `Alfatrees PMC <noreply@alfatrees.com>` after verifying alfatrees.com domain in Resend.
 
-### 4d. Deploy
-- Click **Deploy** — Vercel builds and deploys automatically
-- You'll get a preview URL like `alfatrees-website-xxx.vercel.app`
-- Test everything on this URL before migrating DNS
+### Vercel Settings (already configured)
+- **Deployment Protection:** DISABLED (do not re-enable — blocks deployments)
+- **Data Preferences:** Consider disabling "Improve models with this project's data"
+- **Framework:** Next.js (auto-detected)
+- **Build Command:** `next build` (default)
+- **Output Directory:** `.next` (default)
 
 ---
 
