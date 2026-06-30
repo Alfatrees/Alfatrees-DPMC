@@ -342,6 +342,18 @@ export function ServiceDetailPage({ data }: { data: ServiceGroup }) {
                 Click any service to reveal methodology, tools used, and typical
                 timeline.
               </p>
+              {data.slug === "estimation" && (
+                <p className="mt-4 max-w-2xl rounded-lg border border-gold-border bg-gold-dim px-5 py-3 text-sm leading-relaxed text-text-secondary">
+                  <strong className="text-heading">Not sure which estimate you need?</strong>{" "}
+                  Start with a <em>Quantity Takeoff</em> for material counts, or a{" "}
+                  <em>Conceptual Estimate</em> for an early budget range. Need a complete bid
+                  package? Work through the options below — or{" "}
+                  <Link href="/get-started" className="font-semibold text-gold-text hover:underline">
+                    get an instant quote
+                  </Link>{" "}
+                  and we&apos;ll recommend the right service for your project stage.
+                </p>
+              )}
             </FadeIn>
             <StaggerContainer className="mt-12 grid gap-5 lg:grid-cols-2">
               {data.services.map((service, i) => (

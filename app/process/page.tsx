@@ -130,15 +130,15 @@ const STEPS = [
     tagline: "Instant quote or $50 discovery call",
     icon: IconVideo,
     summary:
-      "Use our instant quote calculator to get a detailed price breakdown in under 2 minutes — no call needed. For complex or multi-discipline projects: book a 30-minute discovery call ($50, credited to your first engagement) via Zoom.",
+      "Use our instant quote calculator to get a detailed price breakdown in under 2 minutes — no call needed. For complex or multi-discipline projects, book a 30-minute discovery call ($50) to discuss your scope.",
     details: [
       "Use the instant quote calculator — select services, enter project details, see your price breakdown immediately",
       "The quote shows every line item with service codes, rates, and multipliers for full transparency",
       "Book Now to proceed, or Email My Quote to review later — both capture your details",
-      "For complex projects: book a 30-minute discovery call ($50 via Razorpay, credited to first engagement)",
+      "For complex projects: book a 30-minute discovery call ($50) to discuss scope and requirements",
       "Confirm which specific services apply and agree on the engagement structure",
     ],
-    note: "The $50 discovery call fee is fully credited toward your first engagement — so if you proceed, the call costs you nothing.",
+    note: null,
   },
   {
     number: 3,
@@ -584,54 +584,17 @@ export default function ProcessPage() {
           </div>
         </section>
 
-        {/* ── FAQ CALLOUTS ─────────────────────────────────────── */}
+        {/* ── FAQ LINK ─────────────────────────────────────────── */}
         <section className="section-padding bg-bg-secondary">
-          <div className="mx-auto max-w-[1280px] px-6">
-            <FadeIn className="text-center">
-              <h2 className="text-[clamp(24px,3.5vw,36px)] font-semibold text-heading">
-                Common Questions
-              </h2>
+          <div className="mx-auto max-w-[1280px] px-6 text-center">
+            <FadeIn>
+              <p className="text-base text-text-secondary">
+                Have questions about revisions, file formats, timezones, or payments?{" "}
+                <Link href="/faq" className="font-semibold text-gold-text hover:underline">
+                  See our Frequently Asked Questions &rarr;
+                </Link>
+              </p>
             </FadeIn>
-
-            <StaggerContainer className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  q: "Do I need complete drawings to get started?",
-                  a: "No. Partial drawings and preliminary specs are fine. We flag gaps during our review and confirm what is achievable with what you have. A clear scope produces a better deliverable — we will tell you if something critical is missing.",
-                },
-                {
-                  q: "What if I need more than one revision?",
-                  a: "One revision round is included in every fixed-price engagement at no extra cost. Additional revision rounds are available at an hourly rate — confirmed before we proceed. Retainer clients get rolling feedback incorporated weekly.",
-                },
-                {
-                  q: "Can you work to my timezone?",
-                  a: "Yes. We coordinate across North America, Europe, the Gulf, and India. Discovery calls and delivery walkthroughs are scheduled via Cal.com — pick a slot that works for you. Async delivery means most work happens while you sleep.",
-                },
-                {
-                  q: "What file formats do you accept?",
-                  a: "PDF and DWG for drawings. DOCX, PDF for specifications. XLSX for budgets and templates. .mpp for MS Project schedules and .xer for Primavera P6. If your format is not listed, ask — we handle most standard construction formats.",
-                },
-                {
-                  q: "Is there a minimum engagement size?",
-                  a: "The smallest service starts from $75 for a single-trade quantity takeoff. There is no minimum commitment beyond that. Retainer services start at $800/month but are month-to-month with no lock-in term.",
-                },
-                {
-                  q: "How are payments handled?",
-                  a: "Via Razorpay — supports international credit cards, debit cards, and India UPI. Invoices are sent before payment. For international clients, USD pricing applies. India-based clients can pay in INR at the current rate.",
-                },
-              ].map((item) => (
-                <StaggerItem key={item.q}>
-                  <div className="flex h-full flex-col rounded-xl border border-border-default bg-bg-card p-6">
-                    <h3 className="text-sm font-semibold leading-snug text-heading">
-                      {item.q}
-                    </h3>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-text-secondary">
-                      {item.a}
-                    </p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
           </div>
         </section>
 
@@ -656,7 +619,7 @@ export default function ProcessPage() {
                   Request Instant Quote &rarr;
                 </Link>
                 <Link
-                  href="/services/estimation"
+                  href="/#services"
                   className="rounded-lg border border-gold-border bg-transparent px-8 py-3.5 text-base font-semibold text-gold-text transition-colors hover:bg-gold-dim"
                 >
                   Browse Services

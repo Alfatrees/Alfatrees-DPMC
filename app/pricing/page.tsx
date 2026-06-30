@@ -213,12 +213,12 @@ export default function PricingPage() {
                     </div>
 
                     {/* CTA */}
-                    <div className="border-t border-border-default p-6">
+                    <div className="border-t border-border-default p-6 text-center">
                       <Link
                         href="/get-started"
-                        className="block rounded-lg bg-gold px-6 py-3 text-center text-sm font-semibold text-primary-foreground transition-colors hover:bg-gold-hover"
+                        className="text-sm font-medium text-gold-text transition-colors hover:underline"
                       >
-                        Request Instant Quote &rarr;
+                        Get a quote &rarr;
                       </Link>
                     </div>
                   </div>
