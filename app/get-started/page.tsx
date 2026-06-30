@@ -510,6 +510,49 @@ function ContactFields({ fullName, setFullName, email, setEmail, phone, setPhone
   );
 }
 
+function QuoteLineItem({ li, index, accuracyPercent }: { li: QuoteBreakdown["lineItems"][0]; index: number; accuracyPercent: number }) {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div className="rounded-lg border border-border-default bg-bg-primary p-4">
+      <div className="flex flex-wrap items-start justify-between gap-2">
+        <div>
+          <h4 className="text-sm font-semibold text-heading">{index + 1}. {li.name}</h4>
+          <p className="mt-0.5 text-xs text-text-muted">{li.description}</p>
+        </div>
+        <div className="text-right">
+          <div className="text-lg font-bold text-heading">{formatRange(li.rangeLow, li.rangeHigh)}</div>
+          <div className="text-[10px] text-text-muted">{li.tier} · {li.timeline}</div>
+        </div>
+      </div>
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="mt-2 text-xs font-medium text-gold-text hover:underline"
+      >
+        {expanded ? "Hide breakdown" : "View breakdown"} {expanded ? "▲" : "▼"}
+      </button>
+      {expanded && (
+        <div className="mt-3 border-t border-border-default pt-3">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="rounded bg-gold-dim px-2 py-0.5 text-xs font-bold text-gold-text">{li.code}</span>
+            <span className="rounded border border-border-default px-2 py-0.5 text-[10px] font-medium text-text-muted">{li.tier}</span>
+          </div>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-xs sm:grid-cols-5">
+            <div><span className="text-text-muted">Base:</span> <span className="font-medium text-text-primary">{formatUSD(li.basePrice)}</span></div>
+            <div><span className="text-text-muted">Value:</span> <span className="font-medium text-text-primary">{li.valueLabel}</span></div>
+            <div><span className="text-text-muted">Complexity:</span> <span className="font-medium text-text-primary">{li.complexityLabel}</span></div>
+            <div><span className="text-text-muted">Scope:</span> <span className="font-medium text-text-primary">{li.scopeLabel}</span></div>
+            <div><span className="text-text-muted">Urgency:</span> <span className="font-medium text-text-primary">{li.urgencyLabel}</span></div>
+          </div>
+          <div className="mt-2 text-[10px] text-text-muted">Basis: {li.pricingBasis}</div>
+          <div className="mt-1 flex flex-wrap gap-1.5">
+            {li.standards.map((s) => <span key={s} className="rounded border border-border-default px-1.5 py-0.5 text-[10px] text-text-muted">{s}</span>)}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function QuoteDisplay({ quote }: { quote: QuoteBreakdown }) {
   return (
     <div className="rounded-xl border-2 border-gold bg-bg-card">
@@ -532,43 +575,14 @@ function QuoteDisplay({ quote }: { quote: QuoteBreakdown }) {
           <div><span className="text-text-muted">Type:</span> <span className="text-text-primary">{quote.input.projectType}</span></div>
           <div><span className="text-text-muted">Stage:</span> <span className="text-text-primary">{quote.input.projectStage}</span></div>
           <div><span className="text-text-muted">Value:</span> <span className="text-text-primary">{quote.input.projectValue}</span></div>
-          <div><span className="text-text-muted">Sheets:</span> <span className="text-text-primary">{quote.input.sheets}</span></div>
-          <div><span className="text-text-muted">Trades:</span> <span className="text-text-primary">{quote.input.trades}</span></div>
-          {quote.input.areaSqFt > 0 && <div><span className="text-text-muted">Area:</span> <span className="text-text-primary">{quote.input.areaSqFt.toLocaleString()} sq ft</span></div>}
           <div><span className="text-text-muted">Urgency:</span> <span className="text-text-primary">{quote.input.urgency}</span></div>
         </div>
       </div>
       <div className="px-6 py-4 sm:px-8">
         <h3 className="text-xs font-semibold uppercase tracking-wider text-text-muted">Service Breakdown</h3>
-        <div className="mt-4 space-y-5">
+        <div className="mt-4 space-y-3">
           {quote.lineItems.map((li, i) => (
-            <div key={li.code} className="rounded-lg border border-border-default bg-bg-primary p-4">
-              <div className="flex flex-wrap items-start justify-between gap-2">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="rounded bg-gold-dim px-2 py-0.5 text-xs font-bold text-gold-text">{li.code}</span>
-                    <span className="rounded border border-border-default px-2 py-0.5 text-[10px] font-medium text-text-muted">{li.tier}</span>
-                  </div>
-                  <h4 className="mt-1.5 text-sm font-semibold text-heading">{i + 1}. {li.name}</h4>
-                  <p className="mt-0.5 text-xs text-text-muted">{li.description}</p>
-                </div>
-                <div className="text-right">
-                  <div className="text-lg font-bold text-heading">{formatRange(li.rangeLow, li.rangeHigh)}</div>
-                  <div className="text-[10px] text-text-muted">±{quote.accuracyPercent}%</div>
-                </div>
-              </div>
-              <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-border-default pt-3 text-xs sm:grid-cols-5">
-                <div><span className="text-text-muted">Base:</span> <span className="font-medium text-text-primary">{formatUSD(li.basePrice)}</span></div>
-                <div><span className="text-text-muted">Value:</span> <span className="font-medium text-text-primary">{li.valueLabel}</span></div>
-                <div><span className="text-text-muted">Complexity:</span> <span className="font-medium text-text-primary">{li.complexityLabel}</span></div>
-                <div><span className="text-text-muted">Scope:</span> <span className="font-medium text-text-primary">{li.scopeLabel}</span></div>
-                <div><span className="text-text-muted">Urgency:</span> <span className="font-medium text-text-primary">{li.urgencyLabel}</span></div>
-              </div>
-              <div className="mt-2 text-[10px] text-text-muted">Timeline: {li.timeline} · Basis: {li.pricingBasis}</div>
-              <div className="mt-1 flex flex-wrap gap-1.5">
-                {li.standards.map((s) => <span key={s} className="rounded border border-border-default px-1.5 py-0.5 text-[10px] text-text-muted">{s}</span>)}
-              </div>
-            </div>
+            <QuoteLineItem key={li.code} li={li} index={i} accuracyPercent={quote.accuracyPercent} />
           ))}
         </div>
       </div>
