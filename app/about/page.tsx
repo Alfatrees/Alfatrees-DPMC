@@ -52,9 +52,9 @@ const EDGE_ITEMS = [
     ),
   },
   {
-    title: "AI-Augmented Delivery",
+    title: "Rapid Turnaround",
     body:
-      "Modern AI tooling is embedded in every workflow — not as a gimmick but as a production multiplier. Takeoffs, reports, and schedules that would take a traditional consultant two days get turned around in hours. You get speed without sacrificing accuracy or documentation rigour.",
+      "Streamlined workflows and deep specialization mean deliverables that would take a traditional consultant two days get turned around in hours. Efficient processes, proven templates, and focused execution — you get speed without sacrificing accuracy or documentation rigour.",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />

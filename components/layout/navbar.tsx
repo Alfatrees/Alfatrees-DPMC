@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { NAV_LINKS, BRAND } from "@/lib/constants";
@@ -9,8 +10,14 @@ import { useServiceRequest } from "@/components/service-request-provider";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
   const { theme, toggle } = useTheme();
   const { count } = useServiceRequest();
+
+  const isActive = (href: string) => {
+    if (href === "/#services") return pathname.startsWith("/services");
+    return pathname === href;
+  };
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-border-default bg-bg-primary/80 backdrop-blur-xl">
@@ -31,7 +38,11 @@ export function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm text-text-secondary transition-colors hover:text-text-primary"
+              className={`text-sm transition-colors hover:text-text-primary ${
+                isActive(link.href)
+                  ? "text-gold font-semibold"
+                  : "text-text-secondary"
+              }`}
             >
               {link.label}
             </Link>
@@ -106,7 +117,11 @@ export function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-text-secondary transition-colors hover:text-text-primary"
+                className={`transition-colors hover:text-text-primary ${
+                  isActive(link.href)
+                    ? "text-gold font-semibold"
+                    : "text-text-secondary"
+                }`}
               >
                 {link.label}
               </Link>

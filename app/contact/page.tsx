@@ -38,7 +38,7 @@ const CONTACT_METHODS = [
   {
     label: "LinkedIn",
     value: "Connect on LinkedIn",
-    href: "https://linkedin.com/in/prakashchand",
+    href: "https://www.linkedin.com/in/prakashchand222/",
     detail: "Professional network and industry updates",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

@@ -90,7 +90,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://linkedin.com/company/alfatrees"
+                    href="https://www.linkedin.com/in/prakashchand222/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-text-secondary transition-colors hover:text-text-primary"
