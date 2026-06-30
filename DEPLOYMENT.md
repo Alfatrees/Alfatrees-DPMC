@@ -33,41 +33,60 @@ Complete step-by-step instructions to go from code to live at alfatrees.com.
 
 ## Step 2: Cal.com — Discovery Call Scheduling ($0, free plan)
 
-### Sign Up
-1. Sign up at https://cal.com
-2. Username: `alfatrees`
+### Account Details
+- **Plan:** Free (1 event type, unlimited bookings, embed support)
+- **Username:** `alfatrees`
+- **Data region:** USA
+- **Timezone:** Asia/Kolkata (IST)
+- **Video:** Google Meet (auto-generates link per booking)
+- **Event URL:** `https://cal.com/alfatrees/discovery-call`
 
-### Create Event Type
-1. Go to **Event Types** > **New Event Type**
-2. Settings:
-   - **Title:** "Discovery Call — $50"
-   - **Duration:** 30 minutes
-   - **Location:** Zoom (connect your Zoom account)
-   - **Description:** "30-minute video call to discuss your project scope. $50 fee is fully credited toward your first engagement with Alfatrees PMC."
+### Event Type Configuration
+- **Title:** "Discovery Call — $50"
+- **URL slug:** `discovery-call` (critical — code expects this exact slug)
+- **Duration:** 30 minutes
+- **Location:** Google Meet
+- **Slot interval:** 60 minutes (shows hourly slots, not every 30 min)
+- **Before buffer:** 15 minutes
+- **After buffer:** 15 minutes
+- **Minimum notice:** 24 hours
+- **Max bookings per day:** 3
+- **Description:** "30-minute video call to discuss your project scope, timeline, and deliverables. The $50 consultation fee is fully credited toward your first engagement with Alfatrees PMC."
 
-### Availability Schedule
-1. Go to **Availability** > Edit default schedule
-2. Available days: **Monday, Wednesday, Friday ONLY**
-3. Available hours: **10:00 AM – 2:00 PM IST** (gives 4 x 30-min slots)
-   - Slot 1: 10:00 AM IST
-   - Slot 2: 10:30 AM or 11:00 AM IST
-   - Slot 3: 11:30 AM or 12:00 PM IST
-   - Slot 4: 12:30 PM or 1:00 PM IST
-4. Set timezone to IST (Asia/Kolkata)
-5. Max bookings per day: 4
+### Availability — Dual-Window Slot Formation
+**Days:** Monday, Wednesday, Friday only (Tue/Thu/Sat/Sun greyed out)
 
-### Payment Integration (Razorpay via Cal.com)
-- Cal.com supports **Stripe** natively for payments
-- For **Razorpay**: Use the standalone Razorpay integration (see Step 3)
-- Alternative: Set Cal.com event to free booking, collect $50 via Razorpay separately
+**Window 1 — India Morning (for Indian / Middle East clients):**
+| Slot | IST Time |
+|------|----------|
+| 1    | 10:00 AM |
+| 2    | 11:00 AM |
+Availability range: 10:00 AM – 12:00 PM IST
 
-### Booking History
-- Cal.com dashboard shows all bookings (past, current, upcoming)
-- Clients see only available slots (no admin view)
+**Window 2 — India Evening / NA Morning (for North American clients):**
+| Slot | IST Time | NYC (EDT) | NYC (EST) | Chicago | LA |
+|------|----------|-----------|-----------|---------|-----|
+| 3    | 7:00 PM  | 9:30 AM   | 9:30 AM   | 8:30 AM | 6:30 AM |
+| 4    | 8:00 PM  | 10:30 AM  | 10:30 AM  | 9:30 AM | 7:30 AM |
+| 5    | 9:00 PM  | 11:30 AM  | 11:30 AM  | 10:30 AM| 8:30 AM |
+Availability range: 7:00 PM – 10:00 PM IST
 
-### Update Environment Variable
-- Set `NEXT_PUBLIC_CALCOM_USERNAME=alfatrees` in Vercel env vars
-- The Cal.com embed on /get-started will use: `alfatrees/discovery-call`
+**Weekly capacity:** 5 slots/day x 3 days = 15 visible, max 9 bookings/week
+
+### Google Calendar Integration
+- Connected to info.alfatrees@gmail.com
+- "Check for conflicts" enabled (prevents double-bookings)
+- "Add to calendar" set to Google Calendar (bookings auto-appear)
+- Two-way sync: Google Calendar events block Cal.com slots automatically
+
+### Payment Integration (Razorpay via Website)
+- Cal.com event is free to book (no payment collected through Cal.com)
+- $50 discovery call fee collected via Razorpay on the /get-started page
+- Flow: client books on Cal.com embed → Razorpay checkout opens → $50 collected
+
+### Environment Variable
+- `NEXT_PUBLIC_CALCOM_USERNAME=alfatrees` (lowercase, set in Vercel)
+- The Cal.com embed on /get-started and /contact uses: `alfatrees/discovery-call`
 
 ---
 

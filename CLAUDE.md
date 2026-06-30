@@ -6,8 +6,9 @@
 - **Animation:** Framer Motion (UI) + GSAP ScrollTrigger (portfolio) + Three.js/R3F (3D globe)
 - **Email:** Resend (transactional)
 - **Payments:** Razorpay ($50 discovery calls)
-- **Scheduling:** Cal.com embed
-- **Hosting:** Vercel (free tier)
+- **Scheduling:** Cal.com (free plan, username: `alfatrees`, event slug: `discovery-call`)
+- **Hosting:** Vercel (free tier, auto-deploys from GitHub `main` branch)
+- **Repository:** https://github.com/Alfatrees/Alfatrees-DPMC.git
 
 ## Theme System
 - CSS custom properties defined in `app/globals.css`
