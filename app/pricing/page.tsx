@@ -22,7 +22,7 @@ const TIERS = [
       { name: "Detailed Estimate", starts: "$800" },
       { name: "Bid-Ready Package", starts: "$1,500" },
       { name: "Baseline CPM Schedule", starts: "$400" },
-      { name: "Schedule Health Audit", starts: "$250" },
+      { name: "Schedule Health Audit", starts: "$300" },
       { name: "Recovery Schedule", starts: "$600" },
       { name: "Cash-Flow & S-Curve Setup", starts: "$700" },
       { name: "Cost Evaluation", starts: "$400" },
@@ -55,7 +55,7 @@ const TIERS = [
       "Dedicated support with predictable monthly cost. Includes regular deliverables, status calls, and dashboard access.",
     services: [
       { name: "Monthly Schedule Updates", starts: "$800/mo" },
-      { name: "Project Controls Retainer", starts: "$800/mo" },
+      { name: "Project Controls Retainer", starts: "$1,200/mo" },
       { name: "Design Management Retainer", starts: "$1,000/mo" },
     ],
   },

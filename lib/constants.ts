@@ -117,8 +117,8 @@ export const PRICING_TIERS = [
     details: [
       { service: "Quantity Takeoff (Single Trade)", price: { usd: "From $75", inr: "From ₹5,000" } },
       { service: "Conceptual Estimate", price: { usd: "From $200", inr: "From ₹12,000" } },
-      { service: "Detailed Estimate", price: { usd: "From $500", inr: "From ₹30,000" } },
-      { service: "Bid-Ready Package", price: { usd: "From $1,200", inr: "From ₹75,000" } },
+      { service: "Detailed Estimate", price: { usd: "From $800", inr: "From ₹50,000" } },
+      { service: "Bid-Ready Package", price: { usd: "From $1,500", inr: "From ₹95,000" } },
       { service: "Baseline CPM Schedule", price: { usd: "From $400", inr: "From ₹25,000" } },
       { service: "Schedule Health Audit", price: { usd: "From $300", inr: "From ₹18,000" } },
     ],
@@ -142,7 +142,7 @@ export const PRICING_TIERS = [
     details: [
       { service: "Schedule Updates & Reporting", price: { usd: "From $800/mo", inr: "From ₹50,000/mo" } },
       { service: "Project Controls Retainer", price: { usd: "From $1,200/mo", inr: "From ₹75,000/mo" } },
-      { service: "Design Management Retainer", price: { usd: "From $1,500/mo", inr: "From ₹90,000/mo" } },
+      { service: "Design Management Retainer", price: { usd: "From $1,000/mo", inr: "From ₹60,000/mo" } },
     ],
   },
   {
@@ -476,7 +476,7 @@ export const SERVICE_DETAILS: Record<string, ServiceGroup> = {
     ],
     standardsAndTools: ["AACE RP 29R-03", "CPM Best Practices", "MS Project", "Primavera P6", "Excel", "Power BI", "Bluebeam Revu"],
     pricingTier: "FIXED / MONTHLY",
-    pricingStarts: { usd: "$250", inr: "₹15,000" },
+    pricingStarts: { usd: "$300", inr: "₹18,000" },
     projectTypes: ["Residential", "Commercial", "Hospitality", "Healthcare", "Institutional", "Industrial", "Data Center", "Interior Fit-out", "Mixed-Use", "Renovation"],
     ctaText: "Get a Scheduling Quote",
   },
