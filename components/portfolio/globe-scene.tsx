@@ -86,6 +86,7 @@ function Scene({ projects, phase, onSelectProject, selectedProject, hoveredId, o
     const canvas = gl.domElement;
     let clearFlag: ReturnType<typeof setTimeout>;
     const down = (e: PointerEvent) => {
+      clearTimeout(clearFlag); // a prior drag's pending flag-clear must not fire mid-drag
       if (phaseRef.current < 1) return; // pan only inside
       dragging.current = true;
       document.body.dataset.globeDragging = "1"; // suppress swipe phase-step
@@ -116,6 +117,7 @@ function Scene({ projects, phase, onSelectProject, selectedProject, hoveredId, o
     canvas.addEventListener("pointerleave", up);
     return () => {
       clearTimeout(clearFlag);
+      delete document.body.dataset.globeDragging; // unmount mid-drag must not leave a stale flag
       canvas.removeEventListener("pointerdown", down);
       canvas.removeEventListener("pointermove", move);
       canvas.removeEventListener("pointerup", up);
@@ -162,7 +164,6 @@ function Scene({ projects, phase, onSelectProject, selectedProject, hoveredId, o
 
   return (
     <group>
-      <ambientLight intensity={2.5} />
       <group ref={globe}>
         {projects.map((project, i) => (
           <Card
@@ -203,6 +204,7 @@ const FRAME = 0.05; // border thickness beyond image edges
 function Card({ project, slot, texture, phase, isHovered, onClick, onHoverIn, onHoverOut }: CardProps) {
   const group = useRef<THREE.Group>(null);
   const labelMat = useRef<THREE.MeshBasicMaterial>(null);
+  const labelMesh = useRef<THREE.Mesh>(null);
   const curScale = useRef(1);
   const color = TRADE_COLORS[project.trade] ?? "#B8922E";
   const pos = useMemo(() => new THREE.Vector3(slot.x, slot.y, slot.z), [slot]);
@@ -234,6 +236,9 @@ function Card({ project, slot, texture, phase, isHovered, onClick, onHoverIn, on
     return tex;
   }, [project.projectCode, project.facilityName]);
 
+  // GPU cleanup — CanvasTextures are not cached by drei, dispose on unmount/regenerate
+  useEffect(() => () => labelTexture.dispose(), [labelTexture]);
+
   useFrame((_, delta) => {
     if (group.current) {
       group.current.quaternion.copy(quat);
@@ -243,6 +248,8 @@ function Card({ project, slot, texture, phase, isHovered, onClick, onHoverIn, on
     // labels fade with phase — always mounted, opacity animated (no pop-in)
     if (labelMat.current) {
       labelMat.current.opacity = THREE.MathUtils.damp(labelMat.current.opacity, phase >= 1 ? 1 : 0, 6, delta);
+      // skip drawing fully-faded labels (free perf — 50 transparent quads otherwise)
+      if (labelMesh.current) labelMesh.current.visible = labelMat.current.opacity > 0.01;
     }
   });
 
@@ -280,6 +287,7 @@ function Card({ project, slot, texture, phase, isHovered, onClick, onHoverIn, on
       </mesh>
       {/* label — inward-facing, always mounted, opacity animated */}
       <mesh
+        ref={labelMesh}
         position={[0, -(H / 2) - LABEL_H / 2 - 0.05, -0.008]}
         rotation={[0, Math.PI, 0]}
         renderOrder={10}
