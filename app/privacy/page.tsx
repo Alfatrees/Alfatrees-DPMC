@@ -69,6 +69,7 @@ export default function PrivacyPage() {
                   <li><strong>Vercel</strong> — Website hosting and analytics (vercel.com)</li>
                   <li><strong>Resend</strong> — Transactional email delivery for quote summaries and confirmations (resend.com)</li>
                   <li><strong>Cal.com</strong> — Discovery call scheduling (cal.com)</li>
+                  <li><strong>Payment provider</strong> — secure processing of discovery-call fees and invoices (no card data is stored on our servers)</li>
                   <li><strong>Google Drive</strong> — Project document exchange (drive.google.com)</li>
                   <li><strong>Google Workspace</strong> — Professional email (google.com)</li>
                   <li><strong>Zoom</strong> — Video calls for discovery sessions (zoom.us)</li>

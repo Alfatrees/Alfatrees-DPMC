@@ -123,6 +123,8 @@ export const PRICING_TIERS = [
       { service: "Baseline CPM Schedule", price: { usd: "From $400", inr: "From ₹25,000" } },
       { service: "Schedule Health Audit", price: { usd: "From $300", inr: "From ₹18,000" } },
       { service: "Cost Evaluation", price: { usd: "From $400", inr: "From ₹25,000" } },
+      { service: "Constructability Review", price: { usd: "From $400", inr: "From ₹25,000" } },
+      { service: "Performance Evaluation", price: { usd: "From $500", inr: "From ₹30,000" } },
     ],
   },
   {
@@ -152,8 +154,6 @@ export const PRICING_TIERS = [
     description: "Specialized expertise for complex or disputed projects",
     details: [
       { service: "Forensic Delay Analysis", price: { usd: "From $50/hr", inr: "From ₹3,500/hr" } },
-      { service: "Constructability Review", price: { usd: "From $400", inr: "From ₹25,000" } },
-      { service: "Performance Evaluation", price: { usd: "From $500", inr: "From ₹30,000" } },
     ],
   },
 ] as const;

@@ -51,7 +51,7 @@ export default function TermsPage() {
                 <p><strong>Fixed-price engagements $500 and above:</strong> 50% advance before work begins, 50% upon delivery of final deliverables.</p>
                 <p><strong>Hourly engagements:</strong> Weekly invoicing, payment due within 7 days (Net-7).</p>
                 <p><strong>Monthly retainers:</strong> Advance payment due by the 7th of each month. Month-to-month, no long-term lock-in.</p>
-                <p><strong>Discovery call:</strong> A $50 discovery-call fee applies, credited in full toward the first engagement if the client proceeds. Payment instructions are included in the booking confirmation.</p>
+                <p><strong>Discovery call:</strong> A $50 discovery-call fee applies, credited in full toward the first engagement if the client proceeds.</p>
                 <p>Payment instructions are provided with each invoice or booking confirmation. All quoted prices are in USD unless explicitly stated otherwise. Taxes are not included and will be applied as required by applicable law.</p>
               </Section>
 

@@ -28,6 +28,7 @@ const TIERS = [
       { name: "Cash-Flow & S-Curve Setup", starts: "$700" },
       { name: "Cost Evaluation", starts: "$400" },
       { name: "Contractor Evaluation", starts: "$300" },
+      { name: "Performance Evaluation", starts: "$500" },
       { name: "Constructability Review", starts: "$400" },
       { name: "QA/QC Plan Development", starts: "$400" },
       { name: "Inspection Checklist Package", starts: "$200" },
@@ -69,7 +70,6 @@ const TIERS = [
       "Specialized expertise for disputes, claims, and complex project challenges. Formal engagement terms.",
     services: [
       { name: "Forensic Delay Analysis", starts: "$50/hr" },
-      { name: "Performance Evaluation", starts: "$500" },
     ],
   },
 ];
