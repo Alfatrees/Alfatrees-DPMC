@@ -2,11 +2,11 @@
 
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { PortfolioProject } from "./portfolio-data";
-import { CATEGORY_COLORS } from "./portfolio-data";
+import type { DTIProject } from "./portfolio-types";
+import { TRADE_COLORS, CM_ROLE } from "./portfolio-types";
 
 interface ProjectDetailModalProps {
-  project: PortfolioProject | null;
+  project: DTIProject | null;
   onClose: () => void;
 }
 
@@ -32,9 +32,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [onClose]);
 
-  const borderColor = project
-    ? CATEGORY_COLORS[project.category] || "#B8922E"
-    : "#B8922E";
+  const borderColor = project ? TRADE_COLORS[project.trade] || "#B8922E" : "#B8922E";
 
   return (
     <AnimatePresence>
@@ -64,7 +62,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
             <div className="relative aspect-video w-full overflow-hidden rounded-t-2xl bg-bg-secondary">
               <img
                 src={project.thumbnail}
-                alt={project.title}
+                alt={project.facilityName || project.projectCode}
                 className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -73,11 +71,14 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                   className="inline-block rounded-full px-3 py-1 text-xs font-semibold text-white"
                   style={{ backgroundColor: borderColor }}
                 >
-                  {project.category}
+                  {project.trade}
                 </span>
                 <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-                  {project.title}
+                  {project.facilityName || `Project ${project.projectCode}`}
                 </h2>
+                <p className="mt-1 text-xs text-gray-300">
+                  {project.projectCode} · Contract {project.contractNumber}
+                </p>
               </div>
 
               {/* Close button */}
@@ -99,7 +100,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                     <img
                       key={i}
                       src={img}
-                      alt={`${project.title} - ${i + 1}`}
+                      alt={`${project.facilityName || project.projectCode} - ${i + 1}`}
                       className="h-16 w-24 shrink-0 rounded-lg border border-border-default object-cover transition-opacity hover:opacity-80"
                     />
                   ))}
@@ -111,73 +112,75 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
             <div className="space-y-6 p-6 sm:p-8">
               {/* Meta row */}
               <div className="flex flex-wrap gap-3">
-                {project.location && (
-                  <MetaBadge label="Location" value={project.location} />
-                )}
-                {project.projectType && (
-                  <MetaBadge label="Type" value={project.projectType} />
-                )}
-                {project.projectValue && (
-                  <MetaBadge label="Value" value={project.projectValue} />
-                )}
-                {project.year && (
-                  <MetaBadge label="Year" value={project.year} />
-                )}
+                <MetaBadge label="Region" value={project.region || "New Brunswick"} />
+                <MetaBadge label="Contractor" value={project.contractor} />
+                <MetaBadge label="Tender" value={project.tenderType} />
+                <MetaBadge label="Fiscal Year" value={`FY${project.fiscalYear}`} />
+                <MetaBadge label="Status" value={project.status} />
               </div>
 
-              {/* Description */}
+              {/* Overview */}
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
                   Project Overview
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-                  {project.description}
+                  {project.scope || "Scope details being compiled from project records."}
                 </p>
               </div>
 
-              {/* Scope */}
-              <div>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
-                  Scope of Work
-                </h3>
-                <p className="mt-2 text-sm text-text-secondary">{project.scope}</p>
-              </div>
-
-              {/* Services + Deliverables grid */}
-              <div className="grid gap-6 sm:grid-cols-2">
+              {/* Highlights */}
+              {project.highlights.length > 0 && (
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
-                    Services Provided
-                  </h3>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {project.servicesProvided.map((code) => (
-                      <span
-                        key={code}
-                        className="rounded-md px-2.5 py-1 text-xs font-bold"
-                        style={{
-                          backgroundColor: `${borderColor}20`,
-                          color: borderColor,
-                        }}
-                      >
-                        {code}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
-                    Key Deliverables
+                    Highlights
                   </h3>
                   <ul className="mt-2 space-y-1.5">
-                    {project.deliverables.map((d) => (
-                      <li key={d} className="flex items-start gap-2 text-sm text-text-secondary">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 shrink-0" style={{ color: borderColor }}>
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        {d}
+                    {project.highlights.map((h) => (
+                      <li key={h} className="flex items-start gap-2 text-sm text-text-secondary">
+                        <span className="mt-0.5 shrink-0" style={{ color: borderColor }}>·</span>
+                        {h}
                       </li>
                     ))}
                   </ul>
+                </div>
+              )}
+
+              {/* Role + Timeline grid */}
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
+                    Role — Construction Manager
+                  </h3>
+                  <ul className="mt-2 space-y-1.5">
+                    {CM_ROLE.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-text-secondary">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 shrink-0" style={{ color: borderColor }}>
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
+                    Timeline
+                  </h3>
+                  <dl className="mt-2 space-y-1.5 text-sm">
+                    {([
+                      ["Tender issued", project.dates.tenderIssued],
+                      ["Awarded", project.dates.awarded],
+                      ["Startup", project.dates.startup],
+                      ["Substantial", project.dates.substantial],
+                      ["Final", project.dates.final],
+                    ] as const).map(([label, value]) => (
+                      <div key={label} className="flex justify-between gap-4">
+                        <dt className="text-text-secondary">{label}</dt>
+                        <dd className="font-semibold text-heading">{value || "—"}</dd>
+                      </div>
+                    ))}
+                  </dl>
                 </div>
               </div>
             </div>
