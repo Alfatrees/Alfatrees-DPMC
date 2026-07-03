@@ -23,8 +23,16 @@ export function TrustStats() {
             return (
               <StaggerItem key={stat.label} className="text-center">
                 {"href" in stat ? (
-                  <Link href={stat.href} title={stat.title} className="group block">
+                  <Link
+                    href={stat.href}
+                    title={stat.title}
+                    aria-label={`${stat.value} ${stat.label} — ${stat.title}`}
+                    className="group block"
+                  >
                     {content}
+                    <span className="sr-only">
+                      Dept. of Transportation &amp; Infrastructure, New Brunswick
+                    </span>
                   </Link>
                 ) : (
                   content
