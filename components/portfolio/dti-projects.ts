@@ -20,10 +20,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility HVAC Upgrade",
+    "region": "New Brunswick",
+    "scope": "Ventilation and HVAC system replacement for a Government of New Brunswick building, including equipment procurement lead-time management and seasonal changeover planning.",
+    "highlights": [
+      "Tendered and awarded through the winter season (issued December 2025, awarded January 2026) with February mobilization",
+      "Open public tender awarded to a Saint John ventilation specialist",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
   },
@@ -44,10 +48,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility HVAC Upgrade",
+    "region": "New Brunswick",
+    "scope": "Ventilation and HVAC system replacement for a Government of New Brunswick building, including equipment procurement lead-time management and seasonal changeover planning.",
+    "highlights": [
+      "Winter tender cycle — issued November 2025, awarded January 2026, on site by late February",
+      "Open public tender awarded to a Dieppe sheet-metal contractor",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/03-glass-tower.jpg"
   },
@@ -68,10 +76,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-10-22"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Delivered within a single construction season — April startup to September substantial completion",
+      "Managed from open tender (February 2025) through final completion in October 2025"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/01-construction-site.jpg"
   },
@@ -92,10 +103,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Fast tender-to-award turnaround — under four weeks from tender issue to contract award",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
@@ -116,10 +130,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-11-27"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Completed within one construction season — July startup to November substantial completion",
+      "Closed out quickly, reaching final completion 17 days after substantial",
+      "One of two concurrent contracts managed with the same Hanwell contractor in FY2025"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/05-concrete-building.jpg"
   },
@@ -140,10 +158,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-11-27"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "29-day tender-to-award turnaround with startup two weeks later",
+      "Substantial completion in November 2025 with final completion 15 days after",
+      "Repeat contractor relationship — one of multiple DTI contracts managed with this Rothesay firm"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/17-construction-workers.jpg"
   },
@@ -164,10 +186,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Awarded via open tender in April 2025 with early-May mobilization to capture the full roofing season",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
@@ -188,10 +213,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-11-24"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Full-season roofing program — May 2025 startup through November substantial and final completion",
+      "Repeat contractor relationship — one of several DTI roofing contracts managed with this Saint John firm"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
@@ -212,10 +240,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "22-day tender-to-award turnaround in June 2025",
+      "Execution carried through the winter to substantial completion in February 2026",
+      "Repeat contractor relationship with an established Saint John roofing firm"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
@@ -236,10 +268,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-12-31"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Six-day tender-to-award turnaround — issued June 17, awarded June 23, 2025",
+      "Substantial completion in November 2025 with final completion by year end",
+      "Repeat contractor relationship with an established Saint John roofing firm"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
@@ -260,10 +296,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-10-03"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Compressed 11-week construction window — July startup to late-September substantial completion",
+      "Final completion achieved within four days of substantial — clean, fast closeout"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/01-construction-site.jpg"
   },
@@ -284,10 +323,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2026-01-13"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Mobilized within two days of award — awarded July 22, on site July 24, 2025",
+      "Carried through to winter substantial completion in December 2025",
+      "Repeat contractor relationship with an established Saint John roofing firm"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
@@ -308,10 +351,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Awarded September 2025 with startup inside 10 days",
+      "Repeat contractor relationship — one of multiple DTI contracts managed with this Rothesay firm",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
@@ -332,10 +379,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Mechanical Upgrade",
+    "region": "New Brunswick",
+    "scope": "Mechanical and plumbing systems upgrade in an operating government facility, including phased shutdowns and commissioning coordination.",
+    "highlights": [
+      "Startup within one week of the October 2025 award, carrying work into the heating season",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
   },
@@ -356,10 +406,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Late-season roofing start — awarded October 2025 with November mobilization into winter conditions",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
@@ -380,10 +433,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Systems Upgrade",
+    "region": "New Brunswick",
+    "scope": "Electrical, fire-alarm, and security systems installation in an occupied government facility, coordinated around daily operations.",
+    "highlights": [
+      "Eleven-month installation program — April 2025 startup to substantial completion in March 2026",
+      "Repeat contractor relationship — second DTI systems contract managed with this Moncton firm"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/09-office-interior.jpg"
   },
@@ -404,10 +460,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Specialty Works",
+    "region": "New Brunswick",
+    "scope": "Specialty construction package for a Government of New Brunswick site, managed from tender award through final completion.",
+    "highlights": [
+      "24-day tender-to-award turnaround in August 2025",
+      "Specialist elevator contractor engaged for the vertical-transportation package",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/20-recreation-center.jpg"
   },
@@ -428,10 +488,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2026-01-28"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Executed through fall and winter — October 2025 startup to substantial completion in January 2026",
+      "Final completion achieved seven days after substantial — tight closeout",
+      "28-day tender-to-award turnaround"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
@@ -452,10 +516,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Six-month build — May 2025 startup to substantial completion in November 2025",
+      "Repeat contractor relationship — one of two concurrent DTI contracts managed with this Hanwell firm"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/05-concrete-building.jpg"
   },
@@ -476,10 +543,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Systems Upgrade",
+    "region": "New Brunswick",
+    "scope": "Electrical, fire-alarm, and security systems installation in an occupied government facility, coordinated around daily operations.",
+    "highlights": [
+      "Specialist communications-infrastructure contractor engaged from out of province (Ontario)",
+      "Awarded May 2025 with mobilization inside three weeks",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/09-office-interior.jpg"
   },
@@ -500,10 +571,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility HVAC Upgrade",
+    "region": "New Brunswick",
+    "scope": "Ventilation and HVAC system replacement for a Government of New Brunswick building, including equipment procurement lead-time management and seasonal changeover planning.",
+    "highlights": [
+      "Sole-source procurement with same-day award and startup (June 23, 2025)",
+      "Specialist building-controls contractor engaged from Nova Scotia",
+      "Substantial completion reached in November 2025 ahead of the heating season"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
   },
@@ -524,10 +599,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Mechanical Upgrade",
+    "region": "New Brunswick",
+    "scope": "Mechanical and plumbing systems upgrade in an operating government facility, including phased shutdowns and commissioning coordination.",
+    "highlights": [
+      "26-day tender-to-award turnaround in June 2025",
+      "Currently active under construction management"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/03-glass-tower.jpg"
   },
@@ -548,10 +626,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-10-22"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Mechanical Upgrade",
+    "region": "New Brunswick",
+    "scope": "Mechanical and plumbing systems upgrade in an operating government facility, including phased shutdowns and commissioning coordination.",
+    "highlights": [
+      "Delivered May–October 2024 with final completion six days after substantial",
+      "One of three contracts managed with John Flood & Sons (1961) Ltd of Saint John"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
   },
@@ -572,10 +653,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2026-01-06"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Fourteen-month major construction contract — June 2024 startup to August 2025 substantial completion",
+      "Interprovincial contractor coordination with Avondale Construction of Halifax, Nova Scotia",
+      "Repeat contractor relationship — Avondale also delivered the Upham depot project (BW4T18)"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/17-construction-workers.jpg"
   },
@@ -596,10 +681,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Roofing execution carried through the 2025–26 winter to substantial completion in February 2026",
+      "One of eight contracts managed with repeat roofing contractor Dowd Roofing Inc of Saint John"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
@@ -620,10 +708,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-11-22"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Full-season roof replacement April–November 2024, with substantial and final completion the same day",
+      "One of eight contracts managed with repeat roofing contractor Dowd Roofing Inc of Saint John"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
@@ -644,10 +735,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-12-13"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Late-season roofing execution — August startup carried to mid-December 2024 completion",
+      "One of eight contracts managed with repeat roofing contractor Dowd Roofing Inc of Saint John"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
@@ -668,10 +762,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-07-09"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Compressed eight-week roofing window — May 13 to July 9, 2024, substantial and final completion same day",
+      "Open-tender award managed with J E Wilson Roofing of Saint John"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
@@ -692,10 +789,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-07-11"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "Winter roofing project — mobilized three days after a mid-December 2024 award, substantially complete by late March 2025",
+      "One of eight contracts managed with repeat roofing contractor Dowd Roofing Inc of Saint John"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
@@ -716,10 +816,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-05-31"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Specialty Works",
+    "region": "New Brunswick",
+    "scope": "Specialty construction package for a Government of New Brunswick site, managed from tender award through final completion.",
+    "highlights": [
+      "Sole-source specialty package awarded three days after tender issue (December 2024)",
+      "Winter execution January–March 2025 to substantial completion"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/15-school-campus.jpg"
   },
@@ -740,10 +843,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-07-23"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Renforth Maintenance Depot — Site Improvements",
+    "region": "Renforth (Rothesay), New Brunswick",
+    "scope": "Site improvements package at the provincial Renforth Maintenance Depot, publicly tendered as BW4T12 and managed from open tender award through same-day substantial and final completion.",
+    "highlights": [
+      "Publicly tendered on NBON/MERX as \"Site Improvements - Renforth Maintenance Depot - NB — BW4T12\"",
+      "Fourteen-week execution — April 16 to July 23, 2024, substantial and final completion the same day"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/01-construction-site.jpg"
   },
@@ -764,10 +870,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "New Upham Maintenance Depot & 5,000T Sand Arch",
+    "region": "Upham, New Brunswick",
+    "scope": "Construction of a new highway maintenance depot and 5,000-tonne sand storage arch for the Government of New Brunswick, managed from open tender through a full year of construction to substantial completion in February 2026.",
+    "highlights": [
+      "New-build depot plus 5,000T sand arch, publicly tendered on NBON (reference BW4T18) with closing extended to January 31, 2025",
+      "Twelve-month construction duration — March 2025 startup to February 2026 substantial completion",
+      "Interprovincial contractor coordination with Avondale Construction of Halifax, Nova Scotia"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
@@ -788,10 +898,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2026-01-22"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Seven-month execution from late-May 2025 startup to December 2025 substantial completion",
+      "Interprovincial contractor coordination with Mapleton Construction of Amherst, Nova Scotia"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/05-concrete-building.jpg"
   },
@@ -812,10 +925,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2023-11-17"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Roof Replacement",
+    "region": "New Brunswick",
+    "scope": "Full roof system replacement on an occupied Government of New Brunswick facility — tear-off, insulation, membrane installation, and flashing details, coordinated to maintain building operations throughout.",
+    "highlights": [
+      "One of eight contracts managed with repeat roofing contractor Dowd Roofing Inc of Saint John",
+      "Full roofing season execution June–November 2023, with substantial and final completion achieved the same day"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
@@ -836,10 +952,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2026-04-14"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Mechanical Upgrade",
+    "region": "New Brunswick",
+    "scope": "Mechanical and plumbing systems upgrade in an operating government facility, including phased shutdowns and commissioning coordination.",
+    "highlights": [
+      "Year-long mechanical upgrade — April 2025 startup through substantial completion in January 2026 and final completion in April 2026",
+      "One of three contracts managed with John Flood & Sons (1961) Ltd of Saint John"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/03-glass-tower.jpg"
   },
@@ -860,10 +979,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-10-21"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Compressed summer-fall delivery — June to October 2024, with substantial and final completion the same day",
+      "Open-tender award managed with L Sanford & Sons of Bloomfield, Kings County"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/17-construction-workers.jpg"
   },
@@ -884,10 +1006,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-10-03"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Specialty Works",
+    "region": "New Brunswick",
+    "scope": "Specialty construction package for a Government of New Brunswick site, managed from tender award through final completion.",
+    "highlights": [
+      "Civil/excavation specialty package executed July–October 2024, completed ahead of winter",
+      "Delivered with Sussex Excavators (2010) Ltd following an open tender"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/20-recreation-center.jpg"
   },
@@ -908,10 +1033,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-08-07"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Mechanical Upgrade",
+    "region": "New Brunswick",
+    "scope": "Mechanical and plumbing systems upgrade in an operating government facility, including phased shutdowns and commissioning coordination.",
+    "highlights": [
+      "Nine-month mechanical installation carried through the 2023–24 winter to substantial completion in February 2024",
+      "One of three contracts managed with John Flood & Sons (1961) Ltd of Saint John"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
   },
@@ -932,10 +1060,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-01-26"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Specialty Works",
+    "region": "New Brunswick",
+    "scope": "Specialty construction package for a Government of New Brunswick site, managed from tender award through final completion.",
+    "highlights": [
+      "Urgent sole-source award — contract awarded two days after tender issue (Sept 26–28, 2023)",
+      "First of two successive sole-source packages managed on project BY3K39",
+      "Executed through winter to January 2024 completion"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/15-school-campus.jpg"
   },
@@ -956,10 +1088,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility HVAC Upgrade",
+    "region": "New Brunswick",
+    "scope": "Ventilation and HVAC system replacement for a Government of New Brunswick building, including equipment procurement lead-time management and seasonal changeover planning.",
+    "highlights": [
+      "Emergency-pace sole-source award — contractor mobilized one day after award (Nov 19–20, 2023)",
+      "Second package managed on project BY3K39, delivered through winter to April 2024 substantial completion"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/03-glass-tower.jpg"
   },
@@ -980,10 +1115,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-06-25"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Fast-track ten-week execution — April 19 to June 25, 2024, substantial and final completion same day",
+      "Interprovincial contractor coordination with Dexter Construction of Bedford, Nova Scotia"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/01-construction-site.jpg"
   },
@@ -1004,10 +1142,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-10-09"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Systems Upgrade",
+    "region": "New Brunswick",
+    "scope": "Electrical, fire-alarm, and security systems installation in an occupied government facility, coordinated around daily operations.",
+    "highlights": [
+      "Winter award (December 2023) with installation carried through to June 2024 substantial completion",
+      "Repeat contractor relationship — Atlantic Alarm & Sound also delivered a later managed contract (BW5K18)"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/09-office-interior.jpg"
   },
@@ -1028,10 +1169,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-11-13"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "Year-long general construction contract — May 2023 startup to June 2024 substantial completion",
+      "Repeat contractor relationship — Eclipse Construction Services appears on four managed contracts"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
@@ -1052,10 +1196,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-01-23"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility HVAC Upgrade",
+    "region": "New Brunswick",
+    "scope": "Ventilation and HVAC system replacement for a Government of New Brunswick building, including equipment procurement lead-time management and seasonal changeover planning.",
+    "highlights": [
+      "Mid-winter award (January 2024) with contractor startup within eight days",
+      "Eleven-month HVAC replacement carried to substantial completion in December 2024"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
   },
@@ -1076,10 +1223,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2023-12-05"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "West Reception Centre — Fundy Trail Parkway",
+    "region": "Bay View, Saint John County, New Brunswick",
+    "scope": "General construction package at the West Reception Centre of Fundy Trail Provincial Park, managed as the first of three successive contracts on this facility, from invited tender through substantial completion.",
+    "highlights": [
+      "First of three successive contracts (2023–2025) managed on the same Fundy Trail Parkway reception centre project",
+      "Invited tender taken from startup to substantial completion in under one month (Nov 9 – Dec 5, 2023)",
+      "Delivered with Kathron Construction of St Martins, local to the parkway's west entrance"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/05-concrete-building.jpg"
   },
@@ -1100,10 +1251,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-05-31"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "West Reception Centre — Fundy Trail Parkway",
+    "region": "Bay View, Saint John County, New Brunswick",
+    "scope": "Second general construction package at the West Reception Centre of Fundy Trail Provincial Park, managed under the same parent project from invited tender through completion.",
+    "highlights": [
+      "Second of three phased contracts managed on the Fundy Trail Parkway reception centre (2023–2025)",
+      "Rapid execution — startup to substantial and final completion within nine days (May 23–31, 2024)"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/17-construction-workers.jpg"
   },
@@ -1124,10 +1278,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "West Reception Centre — Fundy Trail Parkway",
+    "region": "Bay View, Saint John County, New Brunswick",
+    "scope": "Third general construction package at the West Reception Centre of Fundy Trail Provincial Park, publicly tendered as BY2R20-03 and managed from open tender award through active construction.",
+    "highlights": [
+      "Publicly tendered on NBON/MERX as \"West Reception Centre - Fundy Trail Parkway, NB — BY2R20-03\"",
+      "Final phase of a three-contract project run successively from 2023 to 2025",
+      "Repeat contractor relationship — Eclipse Construction Services appears on four managed contracts"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/01-construction-site.jpg"
   },
@@ -1148,10 +1306,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2024-06-18"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Specialty Works",
+    "region": "New Brunswick",
+    "scope": "Specialty construction package for a Government of New Brunswick site, managed from tender award through final completion.",
+    "highlights": [
+      "Invited tender awarded September 2023 and carried to substantial completion by December 2023, ahead of winter",
+      "Specialty package delivered with a solar-energy contractor, Vertex Solar Solutions of Shediac River NB"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/20-recreation-center.jpg"
   },
@@ -1172,10 +1333,13 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": ""
     },
     "status": "Active",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Renovation",
+    "region": "New Brunswick",
+    "scope": "General construction and interior renovation of a Government of New Brunswick facility, coordinating multiple sub-trades from tender through substantial completion.",
+    "highlights": [
+      "One of two related contracts managed under parent project BY479A, alongside a specialty package (BY479B)",
+      "Awarded March 2026 following an open tender; currently in active construction"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
@@ -1196,10 +1360,14 @@ export const DTI_PROJECTS: DTIProject[] = [
       "final": "2025-12-04"
     },
     "status": "Completed",
-    "facilityName": "",
-    "region": "",
-    "scope": "",
-    "highlights": [],
+    "facilityName": "Provincial Facility Specialty Works",
+    "region": "New Brunswick",
+    "scope": "Specialty construction package for a Government of New Brunswick site, managed from tender award through final completion.",
+    "highlights": [
+      "Companion specialty package to general construction contract BY479A under the same parent project",
+      "Delivered with Coastal Enterprises of Lepreau, on New Brunswick's Bay of Fundy coast",
+      "Summer-fall execution June–September 2025 with final completion in December 2025"
+    ],
     "images": [],
     "thumbnail": "/portfolio/images/15-school-campus.jpg"
   }
