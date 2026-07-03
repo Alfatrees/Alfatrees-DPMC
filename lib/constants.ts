@@ -119,8 +119,10 @@ export const PRICING_TIERS = [
       { service: "Conceptual Estimate", price: { usd: "From $200", inr: "From ₹12,000" } },
       { service: "Detailed Estimate", price: { usd: "From $800", inr: "From ₹50,000" } },
       { service: "Bid-Ready Package", price: { usd: "From $1,500", inr: "From ₹95,000" } },
+      { service: "Change Order Estimate", price: { usd: "From $200", inr: "From ₹12,000" } },
       { service: "Baseline CPM Schedule", price: { usd: "From $400", inr: "From ₹25,000" } },
       { service: "Schedule Health Audit", price: { usd: "From $300", inr: "From ₹18,000" } },
+      { service: "Cost Evaluation", price: { usd: "From $400", inr: "From ₹25,000" } },
     ],
   },
   {
@@ -130,8 +132,6 @@ export const PRICING_TIERS = [
     description: "Flexible support for ongoing or evolving project needs",
     details: [
       { service: "Fractional Project Controls", price: { usd: "From $25/hr", inr: "From ₹1,500/hr" } },
-      { service: "Change Order Analysis", price: { usd: "From $35/hr", inr: "From ₹2,200/hr" } },
-      { service: "Cost Evaluation", price: { usd: "From $40/hr", inr: "From ₹2,500/hr" } },
     ],
   },
   {
@@ -152,8 +152,8 @@ export const PRICING_TIERS = [
     description: "Specialized expertise for complex or disputed projects",
     details: [
       { service: "Forensic Delay Analysis", price: { usd: "From $50/hr", inr: "From ₹3,500/hr" } },
-      { service: "Constructability Review", price: { usd: "From $60/hr", inr: "From ₹4,000/hr" } },
-      { service: "Performance Evaluation", price: { usd: "From $55/hr", inr: "From ₹3,800/hr" } },
+      { service: "Constructability Review", price: { usd: "From $400", inr: "From ₹25,000" } },
+      { service: "Performance Evaluation", price: { usd: "From $500", inr: "From ₹30,000" } },
     ],
   },
 ] as const;

@@ -21,6 +21,7 @@ const TIERS = [
       { name: "Design Development Estimate", starts: "$400" },
       { name: "Detailed Estimate", starts: "$800" },
       { name: "Bid-Ready Package", starts: "$1,500" },
+      { name: "Change Order Estimate", starts: "$200" },
       { name: "Baseline CPM Schedule", starts: "$400" },
       { name: "Schedule Health Audit", starts: "$300" },
       { name: "Recovery Schedule", starts: "$600" },
@@ -42,7 +43,6 @@ const TIERS = [
       "Flexible support for ongoing or evolving project needs. Scale up or down based on project intensity.",
     services: [
       { name: "Fractional Project Controls", starts: "$25/hr" },
-      { name: "Change Order Analysis", starts: "$25/hr" },
     ],
   },
   {
@@ -69,7 +69,7 @@ const TIERS = [
       "Specialized expertise for disputes, claims, and complex project challenges. Formal engagement terms.",
     services: [
       { name: "Forensic Delay Analysis", starts: "$50/hr" },
-      { name: "Performance Evaluation", starts: "$55/hr" },
+      { name: "Performance Evaluation", starts: "$500" },
     ],
   },
 ];
