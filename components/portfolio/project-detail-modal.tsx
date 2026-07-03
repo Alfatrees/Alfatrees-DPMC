@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { DTIProject } from "./portfolio-types";
-import { TRADE_COLORS, CM_ROLE } from "./portfolio-types";
+import { TRADE_COLORS, CM_ROLE, fmtDate } from "./portfolio-types";
 
 interface ProjectDetailModalProps {
   project: DTIProject | null;
@@ -84,6 +84,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
               {/* Close button */}
               <button
                 onClick={onClose}
+                aria-label="Close"
                 className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -177,7 +178,7 @@ export function ProjectDetailModal({ project, onClose }: ProjectDetailModalProps
                     ] as const).map(([label, value]) => (
                       <div key={label} className="flex justify-between gap-4">
                         <dt className="text-text-secondary">{label}</dt>
-                        <dd className="font-semibold text-heading">{value || "—"}</dd>
+                        <dd className="font-semibold text-heading">{fmtDate(value)}</dd>
                       </div>
                     ))}
                   </dl>

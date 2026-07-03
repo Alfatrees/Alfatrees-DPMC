@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useSyncExternalStore } from "react";
 import dynamic from "next/dynamic";
-import { useProgress } from "@react-three/drei";
 import { Navbar } from "@/components/layout/navbar";
 import { DTI_PROJECTS } from "@/components/portfolio/dti-projects";
 import { PORTFOLIO_STATS } from "@/components/portfolio/portfolio-types";
@@ -14,6 +13,14 @@ import { useGlobePhase } from "@/components/portfolio/use-globe-phase";
 
 const GlobeScene = dynamic(
   () => import("@/components/portfolio/globe-scene").then((m) => ({ default: m.GlobeScene })),
+  { ssr: false }
+);
+
+// useProgress pulls drei/three loader core — keep it out of the page's
+// initial JS by loading it lazily alongside the globe (table-only users
+// never fetch it)
+const GlobeLoadingReporter = dynamic(
+  () => import("@/components/portfolio/globe-loading").then((m) => ({ default: m.GlobeLoadingReporter })),
   { ssr: false }
 );
 
@@ -53,7 +60,8 @@ export default function PortfolioPage() {
   const [selectedProject, setSelectedProject] = useState<DTIProject | null>(null);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const { phase, goTo } = useGlobePhase(view === "globe" && capable === true && !selectedProject);
-  const { progress } = useProgress();
+  // fed by the lazy GlobeLoadingReporter so drei stays out of the initial chunk
+  const [progress, setProgress] = useState(0);
   const loaded = progress >= 100;
 
   // no document scroll while the globe is active
@@ -86,14 +94,17 @@ export default function PortfolioPage() {
             style={{ opacity: loaded ? 1 : 0 }}
           >
             {capable && (
-              <GlobeScene
-                projects={DTI_PROJECTS}
-                phase={phase}
-                onSelectProject={setSelectedProject}
-                selectedProject={selectedProject}
-                hoveredId={hoveredId}
-                onHover={setHoveredId}
-              />
+              <>
+                <GlobeLoadingReporter onProgress={setProgress} />
+                <GlobeScene
+                  projects={DTI_PROJECTS}
+                  phase={phase}
+                  onSelectProject={setSelectedProject}
+                  selectedProject={selectedProject}
+                  hoveredId={hoveredId}
+                  onHover={setHoveredId}
+                />
+              </>
             )}
           </div>
 

@@ -49,6 +49,17 @@ export const CM_ROLE = [
   "Substantial & final completion sign-off",
 ] as const;
 
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+// Locale-stable ISO (YYYY-MM-DD) → "Jan 26, 2026"; "—" when empty.
+// Manual month map avoids toLocaleDateString SSR/CSR locale drift.
+export function fmtDate(iso?: string): string {
+  if (!iso) return "—";
+  const [y, m, d] = iso.split("-").map(Number);
+  if (!y || !m || !d || m > 12) return iso;
+  return `${MONTHS[m - 1]} ${d}, ${y}`;
+}
+
 export const PORTFOLIO_STATS = {
   contracts: 50,
   contractors: 34,

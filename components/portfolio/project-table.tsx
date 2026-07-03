@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import type { DTIProject, Trade } from "./portfolio-types";
-import { TRADE_COLORS, PORTFOLIO_STATS } from "./portfolio-types";
+import { TRADE_COLORS, PORTFOLIO_STATS, fmtDate } from "./portfolio-types";
 
 type SortKey = "projectCode" | "trade" | "contractor" | "awarded" | "substantial" | "status";
 
@@ -36,8 +36,10 @@ export function ProjectTable({ projects, onSelectProject }: ProjectTableProps) {
     );
     const val = (p: DTIProject): string => {
       switch (sort.key) {
-        case "awarded": return p.dates.awarded ?? "";
-        case "substantial": return p.dates.substantial ?? "9999";
+        case "awarded": return p.dates.awarded || "";
+        // data emits "" (not undefined) for missing dates — || so active
+        // contracts sort last ascending instead of first
+        case "substantial": return p.dates.substantial || "9999";
         default: return String(p[sort.key] ?? "");
       }
     };
@@ -46,11 +48,17 @@ export function ProjectTable({ projects, onSelectProject }: ProjectTableProps) {
 
   const header = (key: SortKey, label: string) => (
     <th
-      className="cursor-pointer select-none whitespace-nowrap px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-text-muted hover:text-heading"
-      onClick={() => setSort((s) => ({ key, dir: s.key === key ? ((-s.dir) as 1 | -1) : 1 }))}
+      scope="col"
+      className="whitespace-nowrap px-4 py-3 text-left"
       aria-sort={sort.key === key ? (sort.dir === 1 ? "ascending" : "descending") : "none"}
     >
-      {label} {sort.key === key ? (sort.dir === 1 ? "↑" : "↓") : ""}
+      <button
+        type="button"
+        onClick={() => setSort((s) => ({ key, dir: s.key === key ? ((-s.dir) as 1 | -1) : 1 }))}
+        className="w-full cursor-pointer select-none text-left text-[11px] font-semibold uppercase tracking-wider text-text-muted hover:text-heading"
+      >
+        {label} {sort.key === key ? (sort.dir === 1 ? "↑" : "↓") : ""}
+      </button>
     </th>
   );
 
@@ -99,14 +107,14 @@ export function ProjectTable({ projects, onSelectProject }: ProjectTableProps) {
         <table className="w-full border-collapse bg-bg-card text-sm">
           <thead className="border-b border-border-default bg-bg-secondary">
             <tr>
-              <th className="w-20 px-4 py-3" aria-label="Photo" />
+              <th scope="col" className="w-20 px-4 py-3" aria-label="Photo" />
               {header("projectCode", "Project")}
               {header("trade", "Trade")}
               {header("contractor", "Contractor")}
               {header("awarded", "Awarded")}
               {header("substantial", "Completed")}
               {header("status", "Status")}
-              <th className="w-10 px-2 py-3" aria-label="Expand" />
+              <th scope="col" className="w-10 px-2 py-3" aria-label="Expand" />
             </tr>
           </thead>
           <tbody>
@@ -164,10 +172,20 @@ function RowPair({ p, open, onToggle, onDetails }: {
           </span>
         </td>
         <td className="max-w-[200px] truncate px-4 py-2.5 text-text-secondary">{p.contractor}</td>
-        <td className="whitespace-nowrap px-4 py-2.5 text-text-secondary">{p.dates.awarded || "—"}</td>
-        <td className="whitespace-nowrap px-4 py-2.5 text-text-secondary">{p.dates.substantial || "—"}</td>
+        <td className="whitespace-nowrap px-4 py-2.5 text-text-secondary">{fmtDate(p.dates.awarded)}</td>
+        <td className="whitespace-nowrap px-4 py-2.5 text-text-secondary">{fmtDate(p.dates.substantial)}</td>
         <td className="px-4 py-2.5"><StatusBadge status={p.status} /></td>
-        <td className="px-2 py-2.5 text-text-muted">{open ? "▾" : "▸"}</td>
+        <td className="px-2 py-2.5">
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-label={`Expand ${p.projectCode}`}
+            onClick={(e) => { e.stopPropagation(); onToggle(); }}
+            className="cursor-pointer text-text-muted hover:text-heading"
+          >
+            {open ? "▾" : "▸"}
+          </button>
+        </td>
       </tr>
       {open && (
         <tr className="border-b border-border-default/60 bg-bg-secondary/30">
@@ -191,7 +209,7 @@ function RowPair({ p, open, onToggle, onDetails }: {
                      ["Startup", p.dates.startup], ["Substantial", p.dates.substantial],
                      ["Final", p.dates.final]] as const).map(([k, v]) => (
                     <div key={k} className="flex justify-between gap-4">
-                      <dt>{k}</dt><dd className="font-medium text-heading">{v || "—"}</dd>
+                      <dt>{k}</dt><dd className="font-medium text-heading">{fmtDate(v)}</dd>
                     </div>
                   ))}
                 </dl>
