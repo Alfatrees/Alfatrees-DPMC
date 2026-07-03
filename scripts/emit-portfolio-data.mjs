@@ -16,9 +16,20 @@ const STOCK = {
   "Specialty & Civil": ["20-recreation-center.jpg", "15-school-campus.jpg"],
 };
 
-const projects = MASTER.map((p, i) => {
-  const pool = STOCK[p.trade] ?? STOCK["General Construction"];
-  const thumbnail = p.images[0] ?? `/portfolio/images/${pool[i % pool.length]}`;
+// Guard: every trade in the master data must have a STOCK pool — fail loudly, not silently.
+const unknownTrades = [...new Set(MASTER.map((p) => p.trade))].filter((t) => !(t in STOCK));
+if (unknownTrades.length > 0) {
+  throw new Error(
+    `No STOCK pool for trade(s): ${unknownTrades.join(", ")} — update STOCK in scripts/emit-portfolio-data.mjs`
+  );
+}
+
+const counters = {};
+const projects = MASTER.map((p) => {
+  const pool = STOCK[p.trade];
+  const n = counters[p.trade] ?? 0;
+  counters[p.trade] = n + 1;
+  const thumbnail = p.images[0] ?? `/portfolio/images/${pool[n % pool.length]}`;
   const { sources, parentProject, contractDate, ...pub } = p; // research URLs stay private
   return { ...pub, thumbnail };
 });
@@ -30,6 +41,6 @@ import type { DTIProject } from "./portfolio-types";
 export const DTI_PROJECTS: DTIProject[] = `;
 fs.writeFileSync(
   "components/portfolio/dti-projects.ts",
-  banner + JSON.stringify(projects, null, 2) + " as DTIProject[];\n"
+  banner + JSON.stringify(projects, null, 2) + ";\n"
 );
 console.log(`Emitted ${projects.length} projects → components/portfolio/dti-projects.ts`);

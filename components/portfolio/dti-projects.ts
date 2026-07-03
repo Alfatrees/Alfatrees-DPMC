@@ -73,7 +73,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/05-concrete-building.jpg"
+    "thumbnail": "/portfolio/images/01-construction-site.jpg"
   },
   {
     "id": "bw5110",
@@ -97,7 +97,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/17-construction-workers.jpg"
+    "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
   {
     "id": "bw5175",
@@ -121,7 +121,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/01-construction-site.jpg"
+    "thumbnail": "/portfolio/images/05-concrete-building.jpg"
   },
   {
     "id": "bw5187",
@@ -145,7 +145,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/02-building-crane.jpg"
+    "thumbnail": "/portfolio/images/17-construction-workers.jpg"
   },
   {
     "id": "bw5203",
@@ -265,7 +265,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/05-concrete-building.jpg"
+    "thumbnail": "/portfolio/images/01-construction-site.jpg"
   },
   {
     "id": "bw5267",
@@ -289,7 +289,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
+    "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
   {
     "id": "bw5288",
@@ -313,7 +313,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/01-construction-site.jpg"
+    "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
   {
     "id": "bw5290",
@@ -337,7 +337,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/03-glass-tower.jpg"
+    "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
   },
   {
     "id": "bw5h19",
@@ -361,7 +361,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
+    "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
   {
     "id": "bw5k18",
@@ -433,7 +433,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
+    "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
   {
     "id": "bw5t18",
@@ -601,7 +601,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
+    "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
   {
     "id": "bw4175",
@@ -625,7 +625,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
+    "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
   {
     "id": "bw4176",
@@ -649,7 +649,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
+    "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
   {
     "id": "bw4180",
@@ -673,7 +673,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
+    "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
   {
     "id": "bw4h96",
@@ -697,7 +697,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
+    "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
   },
   {
     "id": "bw4p17",
@@ -745,7 +745,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/05-concrete-building.jpg"
+    "thumbnail": "/portfolio/images/01-construction-site.jpg"
   },
   {
     "id": "bw4t18",
@@ -769,7 +769,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/17-construction-workers.jpg"
+    "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
   {
     "id": "bw4t25",
@@ -793,7 +793,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/01-construction-site.jpg"
+    "thumbnail": "/portfolio/images/05-concrete-building.jpg"
   },
   {
     "id": "bw3k13",
@@ -817,7 +817,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/12-bridge-structure.jpg"
+    "thumbnail": "/portfolio/images/10-architectural-detail.jpg"
   },
   {
     "id": "bw3k25",
@@ -841,7 +841,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
+    "thumbnail": "/portfolio/images/03-glass-tower.jpg"
   },
   {
     "id": "bw3t13",
@@ -913,7 +913,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/03-glass-tower.jpg"
+    "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
   },
   {
     "id": "by3k39",
@@ -937,7 +937,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/20-recreation-center.jpg"
+    "thumbnail": "/portfolio/images/15-school-campus.jpg"
   },
   {
     "id": "by3k39-02",
@@ -1033,7 +1033,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/05-concrete-building.jpg"
+    "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
   {
     "id": "by3t79",
@@ -1057,7 +1057,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/03-glass-tower.jpg"
+    "thumbnail": "/portfolio/images/13-warehouse-industrial.jpg"
   },
   {
     "id": "by2r20",
@@ -1081,7 +1081,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/01-construction-site.jpg"
+    "thumbnail": "/portfolio/images/05-concrete-building.jpg"
   },
   {
     "id": "by2r20-02",
@@ -1105,7 +1105,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/02-building-crane.jpg"
+    "thumbnail": "/portfolio/images/17-construction-workers.jpg"
   },
   {
     "id": "by2r20-03",
@@ -1129,7 +1129,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/05-concrete-building.jpg"
+    "thumbnail": "/portfolio/images/01-construction-site.jpg"
   },
   {
     "id": "by2r28",
@@ -1153,7 +1153,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/15-school-campus.jpg"
+    "thumbnail": "/portfolio/images/20-recreation-center.jpg"
   },
   {
     "id": "by479a",
@@ -1177,7 +1177,7 @@ export const DTI_PROJECTS: DTIProject[] = [
     "scope": "",
     "highlights": [],
     "images": [],
-    "thumbnail": "/portfolio/images/01-construction-site.jpg"
+    "thumbnail": "/portfolio/images/02-building-crane.jpg"
   },
   {
     "id": "by479b",
@@ -1203,4 +1203,4 @@ export const DTI_PROJECTS: DTIProject[] = [
     "images": [],
     "thumbnail": "/portfolio/images/15-school-campus.jpg"
   }
-] as DTIProject[];
+];
