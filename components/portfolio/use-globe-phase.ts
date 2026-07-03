@@ -40,6 +40,7 @@ export function useGlobePhase(enabled: boolean) {
   const goTo = useCallback((p: 0 | 1 | 2) => {
     phaseRef.current = p;
     lockUntil.current = performance.now() + 800;
+    acc.current = 0; // don't carry a partial gesture across a jump
     setPhase(p);
   }, []);
 
