@@ -1,3 +1,5 @@
+import { PORTFOLIO_STATS } from "@/components/portfolio/portfolio-types";
+
 export const BRAND = {
   name: "Alfatrees",
   tagline: "Estimation · Scheduling · Project Controls · Design Management",
@@ -69,7 +71,12 @@ export const SERVICES = [
 
 export const TRUST_STATS = [
   { value: "24–72hr", label: "Typical Turnaround" },
-  { value: "10+", label: "Project Types" },
+  {
+    value: `${PORTFOLIO_STATS.contracts}`,
+    label: "Government Contracts Managed",
+    title: "Dept. of Transportation & Infrastructure, New Brunswick",
+    href: "/portfolio",
+  },
   { value: "23", label: "Specialized Services" },
   { value: "AACE", label: "Aligned Standards" },
 ] as const;
