@@ -92,7 +92,7 @@ const FAQ_SECTIONS = [
       },
       {
         q: "What are the payment terms?",
-        a: "Fixed-price under $500: 100% advance. Fixed-price $500+: 50% advance, 50% on delivery. Hourly: weekly invoicing, Net-7. Monthly retainers: advance payment by the 7th. All payments via Razorpay (international cards + India UPI).",
+        a: "Fixed-price under $500: 100% advance. Fixed-price $500+: 50% advance, 50% on delivery. Hourly: weekly invoicing, Net-7. Monthly retainers: advance payment by the 7th. Payment instructions are provided with each invoice or booking confirmation.",
       },
       {
         q: "Are taxes included in quoted prices?",

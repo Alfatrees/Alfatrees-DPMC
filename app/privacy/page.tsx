@@ -69,18 +69,17 @@ export default function PrivacyPage() {
                   <li><strong>Vercel</strong> — Website hosting and analytics (vercel.com)</li>
                   <li><strong>Resend</strong> — Transactional email delivery for quote summaries and confirmations (resend.com)</li>
                   <li><strong>Cal.com</strong> — Discovery call scheduling (cal.com)</li>
-                  <li><strong>Razorpay</strong> — Payment processing for discovery calls and engagements (razorpay.com)</li>
                   <li><strong>Google Drive</strong> — Project document exchange (drive.google.com)</li>
                   <li><strong>Google Workspace</strong> — Professional email (google.com)</li>
                   <li><strong>Zoom</strong> — Video calls for discovery sessions (zoom.us)</li>
                 </ul>
-                <p className="mt-3">Each service has its own privacy policy. We only share the minimum information necessary for each service to function (e.g., email address to Resend for sending quotes, payment details to Razorpay for processing payments).</p>
+                <p className="mt-3">Each service has its own privacy policy. We only share the minimum information necessary for each service to function (e.g., email address to Resend for sending quotes).</p>
               </Section>
 
               <Section title="4. Data Storage & Security">
                 <p>Your contact information and project details submitted through the website are sent via encrypted email (Resend API over HTTPS). We do not currently store personal data in a database — all quote requests are delivered as emails.</p>
                 <p>Project documents shared via Google Drive remain under your control. We access them only for the duration of the engagement and as needed for the agreed scope of work.</p>
-                <p>Payment information is processed directly by Razorpay and is never stored on our servers.</p>
+                <p>Payment information is processed directly by our payment provider and is never stored on our servers.</p>
               </Section>
 
               <Section title="5. Data Retention">

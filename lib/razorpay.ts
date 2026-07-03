@@ -1,3 +1,4 @@
+// NOT YET WIRED — pending Razorpay account/KYC. Do not reference Razorpay in user-facing copy until connected.
 declare global {
   interface Window {
     Razorpay: new (options: RazorpayOptions) => RazorpayInstance;

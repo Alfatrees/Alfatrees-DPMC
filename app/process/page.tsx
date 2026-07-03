@@ -164,7 +164,7 @@ const STEPS = [
     summary:
       "Upon quote acceptance and payment, work begins within 24–48 hours. You get access to a shared Google Drive folder where all project files are exchanged — documents in, deliverables out.",
     details: [
-      "Accept the quote and complete payment via Razorpay — credit card, debit card, or UPI for India",
+      "Accept the quote and complete payment — payment instructions are included with your quote",
       "A shared Google Drive folder is created and shared with you immediately",
       "Upload all source documents to the shared folder — drawings, specs, existing files",
       "Work begins within 24–48 hours of receiving complete project documents",

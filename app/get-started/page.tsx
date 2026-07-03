@@ -417,7 +417,7 @@ export default function GetStartedPage() {
                         <CalEmbed name={fullName || undefined} email={email || undefined} />
                       </div>
                       <p className="mt-3 text-center text-xs text-text-muted">
-                        $50 payment collected at booking via Razorpay. Credited to your first engagement.
+                        A $50 discovery-call fee applies, credited in full toward your first engagement. Payment instructions are included in your booking confirmation.
                       </p>
 
                       {/* Send project details to Alfatrees (separate from Cal.com booking) */}

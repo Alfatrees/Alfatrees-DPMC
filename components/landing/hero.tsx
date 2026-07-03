@@ -24,8 +24,8 @@ export function Hero() {
           <p className="mx-auto mt-6 max-w-3xl text-[clamp(16px,2vw,20px)] leading-relaxed text-text-secondary">
             We build the bid-ready estimates, CPM schedules, and project controls
             that keep your builds on time, on budget, and audit-ready — from concept
-            through close-out. Trusted by teams across 10+ project types on
-            every continent.
+            through close-out. Backed by 50 construction contracts managed for the
+            Government of New Brunswick, Canada — now serving clients worldwide.
           </p>
         </FadeIn>
 
