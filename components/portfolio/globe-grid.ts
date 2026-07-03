@@ -1,6 +1,6 @@
 // Lat/long grid slot math — pure, no three.js dependency (unit-testable in node).
 // 5 latitude rings × 10 longitude columns = 50 slots. Vertical columns share
-// longitude (converge at poles); rings are level. The grid is never rendered —
+// longitude (converge toward the poles — rings at higher |latitude| are smaller); rings are level. The grid is never rendered —
 // it exists only to place cards in alignment.
 
 export const GRID = {
