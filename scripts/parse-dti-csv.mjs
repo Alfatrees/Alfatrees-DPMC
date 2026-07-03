@@ -32,13 +32,50 @@ const tradeOf = (contractor) =>
 // like `"Open""2026"` tokenize as two fields, not one.
 const raw = fs.readFileSync(CSV, "utf8");
 const fieldRe = /(?:"([^"]*)"|([^,"\r\n]*))(?:,|\r\n?|\n|(?=")|$)/g;
+// matchAll silently skips over text the pattern cannot match (e.g. a stray
+// `"` inside an unquoted field), which would desync the fixed-19 chunking and
+// write corrupted JSON. Enforce contiguity: every match must start exactly
+// where the previous one ended — any gap throws instead of guessing.
+let cursor = 0;
 const fields = [...raw.matchAll(fieldRe)]
-  // matchAll yields one final zero-length match at end-of-input (empty bare
-  // field + `$`); it is an artifact, not a field — drop it.
-  .filter((m) => m.index < raw.length)
+  .filter((m) => {
+    if (m.index < raw.length && m.index !== cursor)
+      throw new Error(
+        `Tokenizer desync at byte ${m.index} (expected ${cursor}) — check for a stray " in an unquoted field`
+      );
+    cursor = m.index + m[0].length;
+    // matchAll yields one final zero-length match at end-of-input (empty bare
+    // field + `$`); it is an artifact, not a field — drop it.
+    return m.index < raw.length;
+  })
   .map((m) => (m[1] ?? m[2] ?? "").trim());
 // The header row is unquoted; data rows start at the first standalone 4-digit year token:
 const start = fields.findIndex((f) => /^\d{4}$/.test(f));
+
+// ── Column layout of the export (positional destructure relies on this) ──
+//  0 Project Fiscal Year         10 Phone Number               (skipped)
+//  1 Contract Number             11 Fax Number                 (skipped)
+//  2 Contract Date               12 Contractor Address
+//  3 Construction Manager (skip) 13 Tender Issue Date
+//  4 Project                     14 Tender Award Date
+//  5 Part                        15 Startup Meeting Date
+//  6 Account (Exp. Type) (skip)  16 Substantial Completion Date
+//  7 Supplier Num        (skip)  17 Final Completion Date
+//  8 Contractor Name             18 Tender Type
+//  9 Letter of Credit Released?  (skipped)
+// Validate the header before trusting column positions:
+const header = fields.slice(0, start);
+if (header.length !== COLS)
+  throw new Error(`Header has ${header.length} fields, expected ${COLS} — CSV format changed`);
+const expectHeader = (idx, re) => {
+  if (!re.test(header[idx]))
+    throw new Error(
+      `Header drift: column ${idx} is "${header[idx]}", expected ${re} — positional destructure is no longer safe`
+    );
+};
+expectHeader(4, /^project$/i);
+expectHeader(8, /contractor name/i);
+expectHeader(18, /tender type/i);
 const data = fields.slice(start);
 if (data.length % COLS !== 0)
   throw new Error(`Field count ${data.length} not divisible by ${COLS} — CSV format changed`);
@@ -58,8 +95,11 @@ const projects = rows.map((r) => {
     parentProject: projectCode,
     fiscalYear: Number(fiscalYear),
     contractDate,
-    contractor: contractor.trim(),
-    contractorLocation: contractorAddress.split(/\s{2,}/).slice(-1)[0]?.trim() ?? "",
+    contractor, // already trimmed by the tokenizer
+    // Fixed-width export pads street | city/province with runs of 2+ spaces;
+    // take the last segment. Falls back to the whole (trimmed) address when
+    // there is no double-space run.
+    contractorLocation: contractorAddress.split(/\s{2,}/).at(-1) ?? "",
     trade: tradeOf(contractor),
     tenderType,
     dates: { tenderIssued, awarded, startup, substantial, final },
