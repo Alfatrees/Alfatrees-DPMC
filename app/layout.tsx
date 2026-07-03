@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       "Bid-ready estimates, CPM schedules, and project controls delivered globally in 24-72 hours. AACE-aligned services across 10+ project types.",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Alfatrees PMC | Estimation, Scheduling & Project Controls",
     description:
       "Bid-ready estimates, CPM schedules, and project controls delivered globally in 24-72 hours.",
