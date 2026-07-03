@@ -13,7 +13,7 @@
 | `--heading` | #1A1A1A | Headings |
 | `--text-primary` | #2C2C2C | Body text |
 | `--text-secondary` | #5C5549 | Secondary text |
-| `--text-muted` | #8A8279 | Muted/placeholder text |
+| `--text-muted` | #6A6254 | Muted/placeholder text |
 | `--gold` | #B8922E | Primary accent, CTAs |
 | `--gold-hover` | #A07E24 | Hover state |
 | `--gold-dim` | rgba(184,146,46,0.10) | Subtle gold backgrounds |
@@ -31,7 +31,7 @@ Light theme has a paper grain overlay (`body::before`, opacity 0.4, multiply ble
 | `--heading` | #F0F0F0 | Headings |
 | `--text-primary` | #D4D4D8 | Body text |
 | `--text-secondary` | #8B9AB5 | Secondary |
-| `--text-muted` | #5A6A80 | Muted |
+| `--text-muted` | #74849A | Muted |
 | `--gold` | #D4A853 | Primary accent |
 | `--gold-hover` | #C49A45 | Hover |
 

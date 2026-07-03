@@ -95,7 +95,7 @@
   --heading: #1A1A1A;
   --text-primary: #2C2C2C;
   --text-secondary: #5C5549;
-  --text-muted: #8A8279;
+  --text-muted: #6A6254; /* WCAG AA: 4.56:1 on #E8DFD0, 5.03:1 on #F0EAE0 */
 
   /* Paper grain overlay opacity (0 in dark mode) */
   --grain-opacity: 0.4;
@@ -120,7 +120,7 @@
   --secondary: #DED5C4;
   --secondary-foreground: #2C2C2C;
   --muted: #DED5C4;
-  --muted-foreground: #8A8279;
+  --muted-foreground: #6A6254;
   --accent: #DED5C4;
   --accent-foreground: #2C2C2C;
   --destructive: #DC2626;
@@ -161,7 +161,7 @@
   --heading: #D4D4D8;
   --text-primary: #BBBFC7;
   --text-secondary: #8B9AB5;
-  --text-muted: #5A6A80;
+  --text-muted: #74849A; /* WCAG AA: 5.23:1 on #07090E, 4.75:1 on #111620 */
 
   /* Paper grain — disabled in dark mode */
   --grain-opacity: 0;
@@ -186,7 +186,7 @@
   --secondary: #0C0F16;
   --secondary-foreground: #BBBFC7;
   --muted: #0C0F16;
-  --muted-foreground: #5A6A80;
+  --muted-foreground: #74849A;
   --accent: #161C2A;
   --accent-foreground: #BBBFC7;
   --destructive: #EF4444;
