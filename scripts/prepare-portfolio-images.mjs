@@ -1,5 +1,5 @@
 // Converts DPMC originals/web images → public/portfolio/{id}/N.webp (640px wide, q80)
-// and regenerates IMAGES-NEEDED.md. Requires sharp (already a Next.js dependency).
+// and regenerates IMAGES-NEEDED.md. Requires sharp (declared in devDependencies).
 // Usage: node scripts/prepare-portfolio-images.mjs
 import fs from "node:fs";
 import path from "node:path";
@@ -13,16 +13,32 @@ const PUB = path.resolve("public/portfolio");
 const missing = [];
 for (const p of MASTER) {
   const srcDirs = [path.join(DPMC, "images/originals", p.id), path.join(DPMC, "images/web", p.id)];
-  const srcs = srcDirs.flatMap((d) =>
-    fs.existsSync(d) ? fs.readdirSync(d).filter((f) => /\.(jpe?g|png|webp)$/i.test(f)).map((f) => path.join(d, f)) : []
-  );
-  if (srcs.length === 0) { p.images = []; missing.push(p); continue; }
+  let rawCount = 0;
+  const srcs = srcDirs.flatMap((d) => {
+    if (!fs.existsSync(d)) return [];
+    const all = fs.readdirSync(d);
+    rawCount += all.length;
+    return all.filter((f) => /\.(jpe?g|png|webp)$/i.test(f)).sort().map((f) => path.join(d, f));
+  });
+  if (srcs.length === 0) {
+    if (rawCount > 0)
+      console.warn(`${p.id}: ${rawCount} file(s) present but unsupported format (HEIC? convert to JPG) — treated as missing`);
+    p.images = [];
+    missing.push(p);
+    continue;
+  }
   const outDir = path.join(PUB, p.id);
+  fs.rmSync(outDir, { recursive: true, force: true });
   fs.mkdirSync(outDir, { recursive: true });
   let n = 1;
   for (const src of srcs) {
-    await sharp(src).resize({ width: 640 }).webp({ quality: 80 }).toFile(path.join(outDir, `${n}.webp`));
-    n++;
+    try {
+      // .rotate() applies EXIF orientation — sharp does not auto-orient, and .webp() strips the tag
+      await sharp(src).rotate().resize({ width: 640 }).webp({ quality: 80 }).toFile(path.join(outDir, `${n}.webp`));
+      n++;
+    } catch (err) {
+      console.warn(`${p.id}: FAILED ${src}: ${err.message}`);
+    }
   }
   p.images = Array.from({ length: n - 1 }, (_, i) => `/portfolio/${p.id}/${i + 1}.webp`);
   console.log(`${p.id}: ${n - 1} image(s)`);
