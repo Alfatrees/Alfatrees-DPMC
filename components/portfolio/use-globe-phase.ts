@@ -15,6 +15,12 @@ export function useGlobePhase(enabled: boolean) {
   const lockUntil = useRef(0);
   const acc = useRef(0);
   const touchY = useRef<number | null>(null);
+  // wheel disarm state: after a step fires, the trackpad momentum tail keeps
+  // emitting same-sign deltas past the 800ms lock; stay disarmed until an
+  // idle gap (>150ms between wheel events) or a direction change
+  const armed = useRef(true);
+  const lastWheelTs = useRef(0);
+  const lastSign = useRef(0);
 
   const step = useCallback((dir: 1 | -1) => {
     const now = performance.now();
@@ -27,6 +33,7 @@ export function useGlobePhase(enabled: boolean) {
     phaseRef.current = next;
     lockUntil.current = now + 800; // cooldown ≈ camera settle time
     acc.current = 0;
+    armed.current = false; // disarm so the momentum tail can't fire a second step
     setPhase(next);
   }, []);
 
@@ -38,21 +45,45 @@ export function useGlobePhase(enabled: boolean) {
 
   useEffect(() => {
     if (!enabled) return;
-    // fresh gesture state on (re-)enable — stale acc/touchY from before a
-    // disable (modal/table view) must not leak into the next gesture
+    // fresh gesture state on (re-)enable — stale acc/touchY/wheel-disarm state
+    // from before a disable (modal/table view) must not leak into the next gesture
     acc.current = 0;
     touchY.current = null;
+    armed.current = true;
+    lastWheelTs.current = 0;
+    lastSign.current = 0;
 
     const onWheel = (e: WheelEvent) => {
       e.preventDefault(); // page has no scroll in globe view
-      if (performance.now() < lockUntil.current) return;
-      acc.current += e.deltaY;
+      const now = performance.now();
+      const idle = now - lastWheelTs.current > 150;
+      lastWheelTs.current = now;
+      if (now < lockUntil.current) return;
+      // normalize deltaMode: Firefox reports lines (1) or pages (2), not pixels
+      const dy =
+        e.deltaMode === 1 ? e.deltaY * 16 :
+        e.deltaMode === 2 ? e.deltaY * window.innerHeight :
+        e.deltaY;
+      const sign = Math.sign(dy);
+      if (!armed.current) {
+        // still riding the momentum tail of the last step: re-arm only on an
+        // idle gap or a direction change, otherwise swallow the event
+        if (idle || (sign !== 0 && sign !== lastSign.current)) armed.current = true;
+        else { if (sign !== 0) lastSign.current = sign; return; }
+      }
+      if (sign !== 0) lastSign.current = sign;
+      if (idle) acc.current = 0; // stale partial gesture, start fresh
+      acc.current += dy;
       if (acc.current > 60) step(1);
       else if (acc.current < -60) step(-1);
     };
-    const onTouchStart = (e: TouchEvent) => { touchY.current = e.touches[0].clientY; };
+    const onTouchStart = (e: TouchEvent) => {
+      // multi-touch (pinch-zoom) is never a swipe
+      touchY.current = e.touches.length === 1 ? e.touches[0].clientY : null;
+    };
     const onTouchMove = (e: TouchEvent) => { e.preventDefault(); };
     const onTouchEnd = (e: TouchEvent) => {
+      if (e.touches.length > 0) { touchY.current = null; return; } // fingers remain
       if (touchY.current === null) return;
       const dy = touchY.current - e.changedTouches[0].clientY;
       touchY.current = null;
