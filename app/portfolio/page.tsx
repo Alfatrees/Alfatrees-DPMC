@@ -30,26 +30,86 @@ const PHASE_HINTS = [
   "Drag to pan · Click a project · Scroll up to exit",
 ];
 
-// client-only capability check, computed once — useSyncExternalStore keeps
-// SSR/hydration safe (server snapshot: null) without setState-in-effect
-const subscribeNever = () => () => {};
-let capableCache: boolean | null = null;
-function detectGlobeCapable(): boolean {
-  if (capableCache === null) {
-    let ok = false;
+// ---------------------------------------------------------------------------
+// Globe capability store (useSyncExternalStore — SSR/hydration safe, no
+// setState-in-effect; server snapshot is always null).
+//
+// WebGL support is deterministic for the session and context creation is
+// costly, so it is probed ONCE and cached (lazily, on first real read).
+//
+// Viewport width and prefers-reduced-motion must be LIVE, never frozen:
+// when a tab is background-loaded or prerendered (Chrome speculation rules,
+// middle-click "open in new tab"), window.innerWidth is 0 at first render.
+// A one-shot cache computed at that moment reads 0 < 768 → "small screen" →
+// capable=false forever, permanently locking desktop users to the table view
+// with the Globe toggle disabled. So:
+//   - innerWidth === 0 → snapshot is null ("unknown"): the UI stays in its
+//     pending state (globe shell + loading overlay) instead of caching false
+//   - subscribe() attaches matchMedia change / resize / visibilitychange
+//     listeners that recompute the snapshot and notify React once the tab
+//     becomes visible and a real measurement exists
+// Do NOT "simplify" this back to a compute-once cache.
+// ---------------------------------------------------------------------------
+
+let webglCache: boolean | null = null;
+function webglOK(): boolean {
+  if (webglCache === null) {
     try {
       const c = document.createElement("canvas");
-      ok = !!(c.getContext("webgl2") || c.getContext("webgl"));
-    } catch { ok = false; }
-    const smallScreen = window.innerWidth < 768;
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    capableCache = ok && !smallScreen && !reducedMotion;
+      webglCache = !!(c.getContext("webgl2") || c.getContext("webgl"));
+    } catch {
+      webglCache = false;
+    }
   }
-  return capableCache;
+  return webglCache;
+}
+
+// getSnapshot must return a value that is stable BETWEEN notifications, so
+// recompute() writes into this module-level variable and is only called from
+// the first snapshot read and from subscribe()'s listeners (before cb()).
+let capableSnapshot: boolean | null = null;
+let capableInitialized = false;
+
+function recomputeCapable(): void {
+  if (window.innerWidth === 0) {
+    // unmeasurable viewport (prerender / background-loaded tab) — unknown
+    capableSnapshot = null;
+    return;
+  }
+  const small = window.matchMedia("(max-width: 767px)").matches;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  capableSnapshot = webglOK() && !small && !reduced;
+}
+
+function getCapableSnapshot(): boolean | null {
+  if (!capableInitialized) {
+    capableInitialized = true;
+    recomputeCapable();
+  }
+  return capableSnapshot;
+}
+
+function subscribeCapable(cb: () => void): () => void {
+  const mqSmall = window.matchMedia("(max-width: 767px)");
+  const mqReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const onChange = () => {
+    recomputeCapable();
+    cb();
+  };
+  mqSmall.addEventListener("change", onChange);
+  mqReduced.addEventListener("change", onChange);
+  window.addEventListener("resize", onChange);
+  document.addEventListener("visibilitychange", onChange);
+  return () => {
+    mqSmall.removeEventListener("change", onChange);
+    mqReduced.removeEventListener("change", onChange);
+    window.removeEventListener("resize", onChange);
+    document.removeEventListener("visibilitychange", onChange);
+  };
 }
 
 function useGlobeCapable(): boolean | null {
-  return useSyncExternalStore(subscribeNever, detectGlobeCapable, () => null);
+  return useSyncExternalStore(subscribeCapable, getCapableSnapshot, () => null);
 }
 
 export default function PortfolioPage() {
